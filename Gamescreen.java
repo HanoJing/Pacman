@@ -7,6 +7,8 @@ public class Gamescreen extends JPanel{
 		
 	private Spielfigur pacMan;
 	
+	// 0 -> barrier, 1 -> left border, 2 -> top border, 4 -> right border, 8 -> bottom border, 16 -> dots
+	
 	private int levelData[] = {
 	    	
 			19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22, 
