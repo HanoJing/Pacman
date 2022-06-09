@@ -6,38 +6,97 @@ public class Gamescreen extends JPanel{
 	private KeyboardFocusManager manager;
 		
 	private Spielfigur pacMan;
-	private Map map;
-	private Game game;
-		
+	
+	public boolean kollision = false;
+	
+	private Rectangle h1;
+	private Rectangle h2;
+	private Rectangle h3;
+	private Rectangle h4;
+	private Rectangle h5;
+	
+	private Rectangle rO;
+	private Rectangle rL;
+	private Rectangle rU;
+	private Rectangle rR;
+	
+	private Dots d;
+	
+	private int score = 0;
+	
 	public Gamescreen(Frame f){
+		
+  		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+   		this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
+    	    	
+		pacMan = new Spielfigur(0,0,50,50,380,300,Color.YELLOW);
+		
+    	h1 = new Rectangle(250,400,100,100);
+    	h2 = new Rectangle(500,300,200,50);
+    	h3 = new Rectangle(50,150,300,100);
+    	h4 = new Rectangle(700,500,300,50);
+    	h5 = new Rectangle(850,250,100,250);
     	
-    	this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-    	this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
-    	   	
-    	pacMan = new Spielfigur(200,200,30,30,380,300, Color.YELLOW);
-    	map = new Map();
-    	game = new Game();
+    	d = new Dots();
     	
-    }
-
-    public void paintComponent(Graphics g) {
+    	
+    	}
+    	
+    
+        	
+	public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	
     	setBackground(Color.BLACK);
-    	
-    	game.showStartscreen(g);
-    	
-    	map.drawMap(g);
-      
+        	
+    	d.drawDots(g);
+    	    	
+    	h1.drawRectangel(g);
+    	h2.drawRectangel(g);
+    	h3.drawRectangel(g);
+    	h4.drawRectangel(g);
+    	h5.drawRectangel(g);
+     	
     	pacMan.showSpielfigur(g);
     	
+      	countScore(g);
+    
     }
-
-	public Spielfigur getPacMan() {
+   
+    public Spielfigur getPacMan() {
 		return pacMan;
 	}
 	
-    
+	public void checkKollision() {
+		
+		if(h1.x<=pacMan.startX && (h1.x+h1.width)>pacMan.startX && h1.y<=pacMan.startY && (h1.y+h1.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h2.x<=pacMan.startX && (h2.x+h2.width)>pacMan.startX && h2.y<=pacMan.startY && (h2.y+h2.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h3.x<=pacMan.startX && (h3.x+h3.width)>pacMan.startX && h3.y<=pacMan.startY && (h3.y+h3.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h4.x<=pacMan.startX && (h4.x+h4.width)>pacMan.startX && h4.y<=pacMan.startY && (h4.y+h4.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h5.x<=pacMan.startX && (h5.x+h5.width)>pacMan.startX && h5.y<=pacMan.startY && (h5.y+h5.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else {
+			kollision = false;
+		}
+				
+	}
+
+	public void countScore(Graphics g) {
+		
+		if(d.x > pacMan.startX && d.y > pacMan.startY) {
+			score++;
+			g.setColor(Color.BLACK);
+			g.fillRect(d.x,d.y,d.size,d.size);
+		}
+		
+		System.out.println(score);
+		
+	}
+	    
 
      
      
