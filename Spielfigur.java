@@ -34,18 +34,18 @@ public class Spielfigur {
 
     public void moveSpielfigur() {
    
-    	if(KeyDispatcher.upPressed == true) {
+    	if(KeyDispatcher.upPressed == true && startY >= 30) {
         	this.startAngle = 480;
-     		this.startY -= 50;
-     	}else if(KeyDispatcher.downPressed == true) {
+     		this.startY -= 30;
+     	}else if(KeyDispatcher.downPressed == true && startY <= 580) {
      		this.startAngle = 300;
-     		this.startY += 50;
-     	}else if(KeyDispatcher.leftPressed == true) {
+     		this.startY += 30;
+     	}else if(KeyDispatcher.leftPressed == true && startX >= 30) {
      		this.startAngle = 210;
-     		this.startX -= 50;
-     	}else if(KeyDispatcher.rightPressed == true) {
+     		this.startX -= 30;
+     	}else if(KeyDispatcher.rightPressed == true && startX <= 1150) {
      		this.startAngle = 380;
-     		this.startX += 50;
+     		this.startX += 30;
      	}
     	
     	
