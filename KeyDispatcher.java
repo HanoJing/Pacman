@@ -7,6 +7,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 	public static boolean leftPressed;
 	public static boolean downPressed;
 	public static boolean rightPressed;
+	public static boolean spacePressed;
 	
 	private Frame f;
 	private Gamescreen gs;
@@ -69,6 +70,11 @@ public class KeyDispatcher implements KeyEventDispatcher {
 					this.gs.getPacMan().startX-=30;
 				}	
 				rightPressed = false;
+			}
+			if(this.keyCode == KeyEvent.VK_SPACE) {
+				spacePressed = true;
+				this.gs.initGame();
+				this.f.repaint();
 			}
 		}
 		

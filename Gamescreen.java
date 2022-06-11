@@ -18,13 +18,13 @@ public class Gamescreen extends JPanel{
 	
 	private Dots d;
 
+	public boolean initGame = false;
 	
-	public Gamescreen(Frame f){
+	public Gamescreen(Frame f) {
 		
   		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
    		this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
    	
-   		
    		h1 = new Rectangle(75,45,150,90);
     	h2 = new Rectangle(285,45,180,90);
     	h3 = new Rectangle(525,15,30,150);
@@ -35,27 +35,31 @@ public class Gamescreen extends JPanel{
     	
     	    	
 		pacMan = new Spielfigur(15,15,30,30,380,300,Color.YELLOW);
-	
+	}
     	
-    	}
-    	
-    
-        	
-	public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	
     	setBackground(Color.BLACK);
-        	
-    	d.drawDots(g);
+    	
+    	if(initGame == false) {
+    		
+    		g.setColor(Color.WHITE);
+    		g.drawString("Drücke Space um zu Starten!",500,350);
+     
+    	}else if(initGame == true) {
+    		    	    		
+    		d.drawDots(g);
     	    	
-    	h1.drawRectangle(g);
-    	h2.drawRectangle(g);
-    	h3.drawRectangle(g);
-    	h4.drawRectangle(g);
-    	h5.drawRectangle(g);
-     	
-    	pacMan.showSpielfigur(g);
+    		h1.drawRectangle(g);
+    		h2.drawRectangle(g);
+    		h3.drawRectangle(g);
+    		h4.drawRectangle(g);
+			h5.drawRectangle(g);
 
+			pacMan.showSpielfigur(g);
+    		
+    	}
     
     }
    
@@ -78,9 +82,14 @@ public class Gamescreen extends JPanel{
 		}else {
 			kollision = false;
 		}
-				
 	}
 
+    public void initGame() {
+    	
+    	if(KeyDispatcher.spacePressed == true) {
+    		initGame = true;
+    	}
+    }
 	    
 
      
