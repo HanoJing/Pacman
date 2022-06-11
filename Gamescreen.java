@@ -15,34 +15,27 @@ public class Gamescreen extends JPanel{
 	private Rectangle h4;
 	private Rectangle h5;
 
-	//private Rectangle h6;
-	
-	private Rectangle rO;
-	private Rectangle rL;
-	private Rectangle rU;
-	private Rectangle rR;
 	
 	private Dots d;
-	
-	private int score = 0;
+
 	
 	public Gamescreen(Frame f){
 		
   		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
    		this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
-    	    	
-		pacMan = new Spielfigur(0,0,50,50,380,300,Color.YELLOW);
-		
-    	h1 = new Rectangle(100,50,150,100);
-    	h2 = new Rectangle(300,50,200,100);
-    	h3 = new Rectangle(550,0,50,150);
-    	h4 = new Rectangle(650,50,200,100);
-    	h5 = new Rectangle(900,50,150,100);
-
-		//h6 = new Rectangle(50, 50, 150, 100);
+   	
+   		
+   		h1 = new Rectangle(75,45,150,90);
+    	h2 = new Rectangle(285,45,180,90);
+    	h3 = new Rectangle(525,0,30,165);
+    	h4 = new Rectangle(615,45,210,120);
+    	h5 = new Rectangle(885,45,150,90);
     	
     	d = new Dots();
     	
+    	    	
+		pacMan = new Spielfigur(15,15,30,30,380,300,Color.YELLOW);
+	
     	
     	}
     	
@@ -55,17 +48,14 @@ public class Gamescreen extends JPanel{
         	
     	d.drawDots(g);
     	    	
-    	h1.drawRectangel(g);
-    	h2.drawRectangel(g);
-    	h3.drawRectangel(g);
-    	h4.drawRectangel(g);
-    	h5.drawRectangel(g);
-
-		//h6.drawRectangel(g);
+    	h1.drawRectangle(g);
+    	h2.drawRectangle(g);
+    	h3.drawRectangle(g);
+    	h4.drawRectangle(g);
+    	h5.drawRectangle(g);
      	
     	pacMan.showSpielfigur(g);
-    	
-      	countScore(g);
+
     
     }
    
@@ -91,17 +81,6 @@ public class Gamescreen extends JPanel{
 				
 	}
 
-	public void countScore(Graphics g) {
-		
-		if(d.x > pacMan.startX && d.y > pacMan.startY) {
-			score++;
-			g.setColor(Color.BLACK);
-			g.drawRoundRect(d.x,d.y,d.size,d.size, 5, 5);
-		}
-		
-		System.out.println(score);
-		
-	}
 	    
 
      
