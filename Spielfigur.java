@@ -26,8 +26,8 @@ public class Spielfigur {
 	public void drawSpielfigur(Graphics g){
 
 		g.setColor(farbe);
-		g.fillArc(15, 665, heigth, width, 380, arcAngle);
-		g.fillArc(55, 665, heigth, width, 380, arcAngle);
+		g.fillArc(15, 665, heigth, width, 380, 300);
+		g.fillArc(55, 665, heigth, width, 380, 300);
 	}
     public void showSpielfigur(Graphics g) {
 	
@@ -37,6 +37,8 @@ public class Spielfigur {
 	}
 
     public void moveSpielfigur() {
+
+		arcAngle = 300;
    
     	if(KeyDispatcher.upPressed == true && startY >= 30) {
         	this.startAngle = 480;
@@ -50,7 +52,7 @@ public class Spielfigur {
      	}else if(KeyDispatcher.rightPressed == true && startX <= 1150) {
      		this.startAngle = 380;
      		this.startX += 50;
-     	}
+		}
     	
     	
     }

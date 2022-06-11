@@ -24,10 +24,13 @@ public class Rectangle {
 
 		g.setColor(Color.BLACK);
 		g.fillRoundRect(x,y,width,height,10,10);
-		g.fillRoundRect(550,5,55,195,10,10);
-		g.fillRoundRect(550,456,55,195, 10, 10);
+		g.fillRoundRect(550,3,55,105,10,10);
+		g.fillRoundRect(550, 520,55,134,10,10);
 		g.fillRoundRect(60,200,100,49,10,10);
 		g.fillRoundRect(60,306,100,49,10,10);
+		g.fillRoundRect(250,305,55,135,10,10);
+		g.fillRoundRect(350,305,55,135,10,10);
+		g.fillRoundRect(450,230,55,225,10,10);
     
 	}
 }
