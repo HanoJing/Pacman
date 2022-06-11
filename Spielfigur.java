@@ -26,8 +26,8 @@ public class Spielfigur {
 	public void drawSpielfigur(Graphics g){
 
 		g.setColor(farbe);
-		g.fillArc(15, 665, heigth, width, startAngle, arcAngle);
-		g.fillArc(55, 665, heigth, width, startAngle, arcAngle);
+		g.fillArc(15, 665, heigth, width, 380, arcAngle);
+		g.fillArc(55, 665, heigth, width, 380, arcAngle);
 	}
     public void showSpielfigur(Graphics g) {
 	

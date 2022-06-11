@@ -6,7 +6,6 @@ public class Dots {
 	public int x;
 	public int y;
 
-	
 	public Dots() {
 
 	}
@@ -16,7 +15,7 @@ public class Dots {
 		g.setColor(Color.WHITE);
 		
 		for(y = 25; y < 730-80; y+=50) {
-			for(x = 25; x < 1200-20; x+=50) {
+			for(x = 25; x < 1150-20; x+=50) {
 				g.fillOval(x,y,size,size);
 
 			}

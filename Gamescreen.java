@@ -15,7 +15,15 @@ public class Gamescreen extends JPanel{
 	private Rectangle h4;
 	private Rectangle h5;
 	private Rectangle h6;
-
+	private Rectangle h7;
+	private Rectangle h8;
+	private Rectangle h9;
+	private Rectangle h10;
+	private Rectangle h11;
+	private Rectangle h12;
+	private Rectangle h13;
+	private Rectangle h14;
+	private Rectangle h15;
 	
 	private Dots d;
 
@@ -24,19 +32,31 @@ public class Gamescreen extends JPanel{
 	public Gamescreen(Frame f) {
 		
   		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-   		this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
+   		this.manager.addKeyEventDispatcher(new KeyDispatcher(f,this));
    	
    		h1 = new Rectangle(50,50,155,105);
-    	h2 = new Rectangle(250,10,55,195);
-    	h3 = new Rectangle(350,50,205,105);
-    	h4 = new Rectangle(650,50,205,105);
-    	h5 = new Rectangle(900, 10, 55, 195);
-    	h6 = new Rectangle(1000,50,155,105);
+    	h2 = new Rectangle(250,50,255,105);
+    	h3 = new Rectangle(550,8,55,195);
+    	h4 = new Rectangle(650,50,255,105);
+    	h5 = new Rectangle(950,50,155,105);
+		h6 = new Rectangle(50,500,155,105);
+		h7 = new Rectangle(250,500,255,105);
+		h8 = new Rectangle(550,450,55,200);
+		h9 = new Rectangle(650,500,255,105);
+		h10 = new Rectangle(950,500,155,105);
+		h11 = new Rectangle(550,250,55,55);
+		h12 = new Rectangle(550,350,55,55);
+		h13 = new Rectangle(50,200,155,155);
+		h14 = new Rectangle(50,200,55,255);
+		h15 = new Rectangle(100,250,55,55);
+
+
+
 
     	d = new Dots();
     	
     	    	
-		pacMan = new Spielfigur(15,15,30,30,380,300,Color.YELLOW);
+		pacMan = new Spielfigur(565,315,30,30,380,300,Color.YELLOW);
 	}
     	
     public void paintComponent(Graphics g) {
@@ -59,6 +79,15 @@ public class Gamescreen extends JPanel{
     		h4.drawRectangle(g);
 			h5.drawRectangle(g);
 			h6.drawRectangle(g);
+			h7.drawRectangle(g);
+			h8.drawRectangle(g);
+			h9.drawRectangle(g);
+			h10.drawRectangle(g);
+			h11.drawRectangle(g);
+			h12.drawRectangle(g);
+			h13.drawRectangle(g);
+			h14.drawRectangle(g);
+			h15.drawRectangle(g);
 
 			pacMan.drawSpielfigur(g);
 
@@ -86,6 +115,18 @@ public class Gamescreen extends JPanel{
 			kollision = true;
 		}else if(h6.x<=pacMan.startX && (h6.x+h6.width)>pacMan.startX && h6.y<=pacMan.startY && (h6.y+h6.height)>=pacMan.startY+pacMan.heigth) {
 		kollision = true;
+		}else if(h7.x<=pacMan.startX && (h7.x+h7.width)>pacMan.startX && h7.y<=pacMan.startY && (h7.y+h7.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h8.x<=pacMan.startX && (h8.x+h8.width)>pacMan.startX && h8.y<=pacMan.startY && (h8.y+h8.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h9.x<=pacMan.startX && (h9.x+h9.width)>pacMan.startX && h9.y<=pacMan.startY && (h9.y+h9.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h10.x<=pacMan.startX && (h10.x+h10.width)>pacMan.startX && h10.y<=pacMan.startY && (h10.y+h10.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h11.x<=pacMan.startX && (h11.x+h11.width)>pacMan.startX && h11.y<=pacMan.startY && (h11.y+h11.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
+		}else if(h12.x<=pacMan.startX && (h12.x+h12.width)>pacMan.startX && h12.y<=pacMan.startY && (h12.y+h12.height)>=pacMan.startY+pacMan.heigth) {
+			kollision = true;
 		}else {
 			kollision = false;
 		}
@@ -93,14 +134,8 @@ public class Gamescreen extends JPanel{
 
     public void initGame() {
     	
-    	if(KeyDispatcher.spacePressed == true) {
+    	if(KeyDispatcher.spacePressed == true || KeyDispatcher.enterPressed == true) {
     		initGame = true;
     	}
     }
-	    
-
-     
-     
-     
-     
 }

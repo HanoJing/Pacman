@@ -8,6 +8,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 	public static boolean downPressed;
 	public static boolean rightPressed;
 	public static boolean spacePressed;
+	public static boolean enterPressed;
 	
 	private Frame f;
 	private Gamescreen gs;
@@ -25,14 +26,14 @@ public class KeyDispatcher implements KeyEventDispatcher {
 		this.keyCode = e.getKeyCode();
 		this.keyID = e.getID();
 		
-		if(this.keyID == KeyEvent.KEY_PRESSED) {
+		if(this.keyID == KeyEvent.KEY_PRESSED){
 			
 			if(this.keyCode == KeyEvent.VK_W || this.keyCode == KeyEvent.VK_UP) {
 				upPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
 				gs.checkKollision();
 				if(gs.kollision == false) {
-					this.f.repaint();
+					f.repaint();
 				}else {
 					this.gs.getPacMan().startY+=30;
 				}
@@ -43,7 +44,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				this.gs.getPacMan().moveSpielfigur();
 				gs.checkKollision();
 				if(gs.kollision == false) {
-					this.f.repaint();
+					f.repaint();
 				}else {
 					this.gs.getPacMan().startX+=30;
 				}	
@@ -54,7 +55,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				this.gs.getPacMan().moveSpielfigur();
 				gs.checkKollision();
 				if(gs.kollision == false) {
-					this.f.repaint();
+					f.repaint();
 				}else {
 					this.gs.getPacMan().startY-=30;
 				}
@@ -65,7 +66,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				this.gs.getPacMan().moveSpielfigur();
 				gs.checkKollision();
 				if(gs.kollision == false) {
-					this.f.repaint();
+					f.repaint();
 				}else {
 					this.gs.getPacMan().startX-=30;
 				}	
@@ -74,7 +75,12 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			if(this.keyCode == KeyEvent.VK_SPACE) {
 				spacePressed = true;
 				this.gs.initGame();
-				this.f.repaint();
+				f.repaint();
+			}
+			if(this.keyCode == KeyEvent.VK_ENTER) {
+				enterPressed = true;
+				this.gs.initGame();
+				f.repaint();
 			}
 		}
 		
@@ -82,6 +88,3 @@ public class KeyDispatcher implements KeyEventDispatcher {
 	}
 
 }
-	
-
-
