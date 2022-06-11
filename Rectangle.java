@@ -16,9 +16,11 @@ public class Rectangle {
 	}
 	
 	public void drawRectangel(Graphics g) {
-		
-		g.setColor(Color.BLUE);
+
+		g.setColor(Color.BLACK);
 		g.fillRect(x,y,width,height);
+		g.setColor(Color.BLUE);
+		g.drawRoundRect(x,y,width,height, 10, 10);
     
 	}
 	

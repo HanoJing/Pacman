@@ -14,6 +14,8 @@ public class Gamescreen extends JPanel{
 	private Rectangle h3;
 	private Rectangle h4;
 	private Rectangle h5;
+
+	//private Rectangle h6;
 	
 	private Rectangle rO;
 	private Rectangle rL;
@@ -31,11 +33,13 @@ public class Gamescreen extends JPanel{
     	    	
 		pacMan = new Spielfigur(0,0,50,50,380,300,Color.YELLOW);
 		
-    	h1 = new Rectangle(250,400,100,100);
-    	h2 = new Rectangle(500,300,200,50);
-    	h3 = new Rectangle(50,150,300,100);
-    	h4 = new Rectangle(700,500,300,50);
-    	h5 = new Rectangle(850,250,100,250);
+    	h1 = new Rectangle(100,50,150,100);
+    	h2 = new Rectangle(300,50,200,100);
+    	h3 = new Rectangle(550,0,50,150);
+    	h4 = new Rectangle(650,50,200,100);
+    	h5 = new Rectangle(900,50,150,100);
+
+		//h6 = new Rectangle(50, 50, 150, 100);
     	
     	d = new Dots();
     	
@@ -56,6 +60,8 @@ public class Gamescreen extends JPanel{
     	h3.drawRectangel(g);
     	h4.drawRectangel(g);
     	h5.drawRectangel(g);
+
+		//h6.drawRectangel(g);
      	
     	pacMan.showSpielfigur(g);
     	
@@ -90,7 +96,7 @@ public class Gamescreen extends JPanel{
 		if(d.x > pacMan.startX && d.y > pacMan.startY) {
 			score++;
 			g.setColor(Color.BLACK);
-			g.fillRect(d.x,d.y,d.size,d.size);
+			g.drawRoundRect(d.x,d.y,d.size,d.size, 5, 5);
 		}
 		
 		System.out.println(score);
