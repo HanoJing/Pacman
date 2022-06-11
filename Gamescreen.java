@@ -14,6 +14,7 @@ public class Gamescreen extends JPanel{
 	private Rectangle h3;
 	private Rectangle h4;
 	private Rectangle h5;
+	private Rectangle h6;
 
 	
 	private Dots d;
@@ -25,12 +26,13 @@ public class Gamescreen extends JPanel{
   		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
    		this.manager.addKeyEventDispatcher(new KeyDispatcher(f, this));
    	
-   		h1 = new Rectangle(75,45,150,90);
-    	h2 = new Rectangle(285,45,180,90);
-    	h3 = new Rectangle(525,15,30,150);
-    	h4 = new Rectangle(615,45,210,120);
-    	h5 = new Rectangle(885,45,150,90);
-    	
+   		h1 = new Rectangle(50,50,155,105);
+    	h2 = new Rectangle(250,10,55,195);
+    	h3 = new Rectangle(350,50,205,105);
+    	h4 = new Rectangle(650,50,205,105);
+    	h5 = new Rectangle(900, 10, 55, 195);
+    	h6 = new Rectangle(1000,50,155,105);
+
     	d = new Dots();
     	
     	    	
@@ -45,7 +47,7 @@ public class Gamescreen extends JPanel{
     	if(initGame == false) {
     		
     		g.setColor(Color.WHITE);
-    		g.drawString("Drücke Space um zu Starten!",500,350);
+    		g.drawString("Druecke Space um zu Starten!",500,350);
      
     	}else if(initGame == true) {
     		    	    		
@@ -56,6 +58,9 @@ public class Gamescreen extends JPanel{
     		h3.drawRectangle(g);
     		h4.drawRectangle(g);
 			h5.drawRectangle(g);
+			h6.drawRectangle(g);
+
+			pacMan.drawSpielfigur(g);
 
 			pacMan.showSpielfigur(g);
     		
@@ -79,6 +84,8 @@ public class Gamescreen extends JPanel{
 			kollision = true;
 		}else if(h5.x<=pacMan.startX && (h5.x+h5.width)>pacMan.startX && h5.y<=pacMan.startY && (h5.y+h5.height)>=pacMan.startY+pacMan.heigth) {
 			kollision = true;
+		}else if(h6.x<=pacMan.startX && (h6.x+h6.width)>pacMan.startX && h6.y<=pacMan.startY && (h6.y+h6.height)>=pacMan.startY+pacMan.heigth) {
+		kollision = true;
 		}else {
 			kollision = false;
 		}

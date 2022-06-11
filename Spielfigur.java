@@ -23,12 +23,16 @@ public class Spielfigur {
 	 
     }
 
+	public void drawSpielfigur(Graphics g){
+
+		g.setColor(farbe);
+		g.fillArc(15, 665, heigth, width, startAngle, arcAngle);
+		g.fillArc(55, 665, heigth, width, startAngle, arcAngle);
+	}
     public void showSpielfigur(Graphics g) {
 	
 	    g.setColor(farbe);
 	    g.fillArc(startX, startY, heigth, width, startAngle, arcAngle);
-	    g.setColor(Color.WHITE);
-	    g.fillOval(startX,startY,4,4);
 	    
 	}
 
@@ -36,16 +40,16 @@ public class Spielfigur {
    
     	if(KeyDispatcher.upPressed == true && startY >= 30) {
         	this.startAngle = 480;
-     		this.startY -= 30;
+     		this.startY -= 50;
      	}else if(KeyDispatcher.downPressed == true && startY <= 580) {
      		this.startAngle = 300;
-     		this.startY += 30;
+     		this.startY += 50;
      	}else if(KeyDispatcher.leftPressed == true && startX >= 30) {
      		this.startAngle = 210;
-     		this.startX -= 30;
+     		this.startX -= 50;
      	}else if(KeyDispatcher.rightPressed == true && startX <= 1150) {
      		this.startAngle = 380;
-     		this.startX += 30;
+     		this.startX += 50;
      	}
     	
     	
