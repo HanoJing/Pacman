@@ -27,7 +27,7 @@ public class Gamescreen extends JPanel{
    		
    		h1 = new Rectangle(75,45,150,90);
     	h2 = new Rectangle(285,45,180,90);
-    	h3 = new Rectangle(525,0,30,165);
+    	h3 = new Rectangle(525,15,30,150);
     	h4 = new Rectangle(615,45,210,120);
     	h5 = new Rectangle(885,45,150,90);
     	
