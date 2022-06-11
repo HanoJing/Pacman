@@ -8,7 +8,7 @@ public class GUI {
    
 
     public GUI() {
-        this.f = new Frame("PacMan", -1, -1, 1200, 730);
+        this.f = new Frame("PacMan", -1, -1, 1220, 730);
         this.painting = new Gamescreen(this.f);
         this.f.getContentPane().add(this.painting);
         this.f.setupFrame();
