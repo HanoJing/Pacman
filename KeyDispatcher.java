@@ -35,7 +35,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
-					this.gs.getPacMan().startY+=30;
+					this.gs.getPacMan().startY+=50;
 				}
 				upPressed = false;
 			}
@@ -46,7 +46,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
-					this.gs.getPacMan().startX+=30;
+					this.gs.getPacMan().startX+=50;
 				}	
 				leftPressed = false;
 			}
@@ -57,7 +57,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
-					this.gs.getPacMan().startY-=30;
+					this.gs.getPacMan().startY-=50;
 				}
 				downPressed = false;
 			}
@@ -68,7 +68,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
-					this.gs.getPacMan().startX-=30;
+					this.gs.getPacMan().startX-=50;
 				}	
 				rightPressed = false;
 			}
