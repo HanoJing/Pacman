@@ -38,20 +38,18 @@ public class Gamescreen extends JPanel{
 	private Rectangle h27;
 	private Rectangle h28;
 	private Rectangle h29;
-	private Rectangle h30;
 
 	
 	private Dots d;
+
 	private Icons i;
 	private Icons j;
-
-	public boolean initGame = false;
 	
 	public Gamescreen(Frame f) {
 		
   		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
    		this.manager.addKeyEventDispatcher(new KeyDispatcher(f,this));
-   	
+
    		h1 = new Rectangle(50,50,155,105);
     	h2 = new Rectangle(250,50,305,105);
     	h3 = new Rectangle(600,8,55,145);
@@ -81,7 +79,6 @@ public class Gamescreen extends JPanel{
 		h27 = new Rectangle(900,250,55,55);
 		h28 = new Rectangle(1050, 200, 55,255); //N
 		h29 = new Rectangle(1150,200,55,255);
-		h30 = new Rectangle(1100,300,55,105);
 
 
     	d = new Dots();
@@ -89,21 +86,14 @@ public class Gamescreen extends JPanel{
 		j = new Icons();
 
 		pacMan = new Spielfigur(615,315,30,30,380,360,Color.YELLOW);
+
 	}
     	
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	
     	setBackground(Color.BLACK);
-    	
-    	if(initGame == false) {
-    		
-    		g.setColor(Color.WHITE);
-			g.drawRoundRect(530,325,230,40,10,10);
-    		g.drawString("Druecke Space um zu Starten!",550,350);
-     
-    	}else if(initGame == true) {
-    		    	    		
+
     		d.drawDots(g);
     	    	
     		h1.drawRectangle(g);
@@ -135,7 +125,6 @@ public class Gamescreen extends JPanel{
 			h27.drawRectangle(g);
 			h28.drawRectangle(g);
 			h29.drawRectangle(g);
-			h30.drawRectangle(g);
 
 			pacMan.drawSpielfigur(g);
 
@@ -145,8 +134,7 @@ public class Gamescreen extends JPanel{
 			j.drawStrawberry(g);
     		
     	}
-    
-    }
+
    
     public Spielfigur getPacMan() {
 		return pacMan;
@@ -212,17 +200,15 @@ public class Gamescreen extends JPanel{
 			kollision = true;
 		}else if(h29.x<=pacMan.startX && (h29.x+h29.width)>pacMan.startX && h29.y<=pacMan.startY && (h29.y+h29.height)>=pacMan.startY+pacMan.heigth) {
 			kollision = true;
-		}else if(h30.x<=pacMan.startX && (h30.x+h30.width)>pacMan.startX && h30.y<=pacMan.startY && (h30.y+h30.height)>=pacMan.startY+pacMan.heigth) {
-			kollision = true;
 		}else {
 			kollision = false;
 		}
 	}
 
-    public void initGame() {
+    /*public void initGame() {
     	
     	if(KeyDispatcher.spacePressed == true || KeyDispatcher.enterPressed == true) {
     		initGame = true;
     	}
-    }
+    }*/
 }

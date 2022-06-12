@@ -25,6 +25,8 @@ public class KeyDispatcher implements KeyEventDispatcher {
 	public boolean dispatchKeyEvent(KeyEvent e) {
 		this.keyCode = e.getKeyCode();
 		this.keyID = e.getID();
+
+
 		
 		if(this.keyID == KeyEvent.KEY_PRESSED){
 			
@@ -74,15 +76,17 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			}
 			if(this.keyCode == KeyEvent.VK_SPACE) {
 				spacePressed = true;
-				this.gs.initGame();
+
+				//this.gs.initGame();
 				f.repaint();
 			}
 			if(this.keyCode == KeyEvent.VK_ENTER) {
 				enterPressed = true;
-				this.gs.initGame();
+				//this.gs.initGame();
 				f.repaint();
 			}
 		}
 		return true;
 	}
 }
+

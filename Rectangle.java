@@ -17,10 +17,15 @@ public class Rectangle {
 	
 	public void drawRectangle(Graphics g) {
 
+		g.setColor(Color.BLACK);
+		g.fillRect(1125,260,25,130);
+
 		g.setColor(Color.BLUE);
 		g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //Map Umrandung
 		g.drawRoundRect(10, 10, 1237, 637, 10, 10); //Map Umrandung
 		g.drawRoundRect(x,y,width,height, 10, 10);
+		g.drawLine(1105,235,1155,320);
+		g.drawLine(1105,350, 1155, 435);
 
 		g.setColor(Color.BLACK);
 		g.fillRoundRect(x,y,width,height,10,10);
@@ -33,6 +38,9 @@ public class Rectangle {
 		g.fillRoundRect(450,230,55,225,10,10);
 		g.fillRoundRect(850,305,55,135,10,10);
 		g.fillRoundRect(950,305,55,135,10,10);
+		g.drawLine(1105,235,1105,350);
+		g.drawLine(1150,310,1150,425);
+
 
     
 	}

@@ -4,37 +4,37 @@ public class Icons {
     public void drawCherry(Graphics g) {
 
         g.setColor(Color.orange);
-        g.fillRect(1188, 678, 2, 2);
-        g.fillRect(1190, 676, 4, 2);
-        g.fillRect(1194, 674, 8, 2);
-        g.fillRect(1198, 672, 4, 2);
-        g.fillRect(1196, 676, 2, 4);
-        g.fillRect(1194, 680, 2, 2);
-        g.fillRect(1192, 682, 2, 2);
+        g.fillRect(1192, 678, 2, 2);
+        g.fillRect(1194, 676, 4, 2);
+        g.fillRect(1198, 674, 8, 2);
+        g.fillRect(1202, 672, 4, 2);
+        g.fillRect(1200, 676, 2, 4);
+        g.fillRect(1198, 680, 2, 2);
+        g.fillRect(1196, 682, 2, 2);
 
         g.setColor(Color.red);
-        g.fillRect(1180, 680, 8, 2);
-        g.fillRect(1178, 682, 12, 2);
-        g.fillRect(1178, 684, 10, 2);
-        g.fillRect(1178, 686, 2, 2);
-        g.fillRect(1182, 686, 4, 2);
-        g.fillRect(1178, 688, 4, 2);
-        g.fillRect(1184, 688, 2, 2);
-        g.fillRect(1180, 690, 6, 2);
-        g.fillRect(1190, 684, 8, 2);
-        g.fillRect(1188, 686, 12, 2);
-        g.fillRect(1188, 688, 12, 2);
-        g.fillRect(1188, 690, 2, 2);
-        g.fillRect(1192, 690, 8, 2);
-        g.fillRect(1188, 692, 4, 2);
-        g.fillRect(1194, 692, 6, 2);
-        g.fillRect(1190, 694, 8, 2);
+        g.fillRect(1184, 680, 8, 2);
+        g.fillRect(1182, 682, 12, 2);
+        g.fillRect(1182, 684, 10, 2);
+        g.fillRect(1182, 686, 2, 2);
+        g.fillRect(1186, 686, 4, 2);
+        g.fillRect(1182, 688, 4, 2);
+        g.fillRect(1188, 688, 2, 2);
+        g.fillRect(1184, 690, 6, 2);
+        g.fillRect(1194, 684, 8, 2);
+        g.fillRect(1192, 686, 12, 2);
+        g.fillRect(1192, 688, 12, 2);
+        g.fillRect(1192, 690, 2, 2);
+        g.fillRect(1196, 690, 8, 2);
+        g.fillRect(1192, 692, 4, 2);
+        g.fillRect(1198, 692, 6, 2);
+        g.fillRect(1194, 694, 8, 2);
 
         g.setColor(Color.white);
-        g.fillRect(1180, 686, 2, 2);
-        g.fillRect(1182, 688, 2, 2);
-        g.fillRect(1190, 690, 2, 2);
-        g.fillRect(1192, 692, 2, 2);
+        g.fillRect(1184, 686, 2, 2);
+        g.fillRect(1186, 688, 2, 2);
+        g.fillRect(1194, 690, 2, 2);
+        g.fillRect(1196, 692, 2, 2);
 
     }
 
@@ -70,5 +70,26 @@ public class Icons {
         g.fillRect(1236,690,2,2);
 
     }
+
+
+    public void drawHeart(Graphics g){
+
+    }
+
+
+    public void drawLoop(Graphics g){
+
+    }
+
+
+    public void drawREADY(Graphics g){
+
+    }
+
+    public void drawScore(Graphics g){
+
+    }
+
+
 
 }
