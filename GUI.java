@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class GUI {
 
-    private Frame f = new Frame("PacMan", -1, -1, 1260, 730);
+    private Frame f = new Frame("PacMan", -1, -1, 1260, 740);
     private Gamescreen painting;
    
 
