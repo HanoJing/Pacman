@@ -87,8 +87,7 @@ public class Gamescreen extends JPanel{
     	d = new Dots();
 		i = new Icons();
 		j = new Icons();
-    	
-    	    	
+
 		pacMan = new Spielfigur(615,315,30,30,380,360,Color.YELLOW);
 	}
     	
@@ -106,8 +105,6 @@ public class Gamescreen extends JPanel{
     	}else if(initGame == true) {
     		    	    		
     		d.drawDots(g);
-			i.drawCherry(g);
-			j.drawStrawberry(g);
     	    	
     		h1.drawRectangle(g);
     		h2.drawRectangle(g);
@@ -143,6 +140,9 @@ public class Gamescreen extends JPanel{
 			pacMan.drawSpielfigur(g);
 
 			pacMan.showSpielfigur(g);
+
+			i.drawCherry(g);
+			j.drawStrawberry(g);
     		
     	}
     
