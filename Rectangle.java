@@ -18,19 +18,22 @@ public class Rectangle {
 	public void drawRectangle(Graphics g) {
 
 		g.setColor(Color.BLUE);
-		g.drawRoundRect(2, 2, 1153, 653, 10, 10);
-		g.drawRoundRect(10, 10, 1137, 637, 10, 10);
+		g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //Map Umrandung
+		g.drawRoundRect(10, 10, 1237, 637, 10, 10); //Map Umrandung
 		g.drawRoundRect(x,y,width,height, 10, 10);
 
 		g.setColor(Color.BLACK);
 		g.fillRoundRect(x,y,width,height,10,10);
-		g.fillRoundRect(550,3,55,105,10,10);
-		g.fillRoundRect(550, 520,55,134,10,10);
+		g.fillRoundRect(600,3,55,105,10,10);
+		g.fillRoundRect(600, 520,55,134,10,10);
 		g.fillRoundRect(60,200,100,49,10,10);
 		g.fillRoundRect(60,306,100,49,10,10);
 		g.fillRoundRect(250,305,55,135,10,10);
 		g.fillRoundRect(350,305,55,135,10,10);
 		g.fillRoundRect(450,230,55,225,10,10);
+		g.fillRoundRect(850,305,55,135,10,10);
+		g.fillRoundRect(950,305,55,135,10,10);
+
     
 	}
 }
