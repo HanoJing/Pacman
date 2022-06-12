@@ -83,8 +83,6 @@ public class KeyDispatcher implements KeyEventDispatcher {
 				f.repaint();
 			}
 		}
-		
 		return true;
 	}
-
 }

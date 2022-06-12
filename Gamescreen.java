@@ -42,6 +42,8 @@ public class Gamescreen extends JPanel{
 
 	
 	private Dots d;
+	private Icons i;
+	private Icons j;
 
 	public boolean initGame = false;
 	
@@ -83,6 +85,8 @@ public class Gamescreen extends JPanel{
 
 
     	d = new Dots();
+		i = new Icons();
+		j = new Icons();
     	
     	    	
 		pacMan = new Spielfigur(615,315,30,30,380,360,Color.YELLOW);
@@ -96,12 +100,14 @@ public class Gamescreen extends JPanel{
     	if(initGame == false) {
     		
     		g.setColor(Color.WHITE);
-			g.drawRoundRect(480,325,230,40,10,10);
-    		g.drawString("Druecke Space um zu Starten!",500,350);
+			g.drawRoundRect(530,325,230,40,10,10);
+    		g.drawString("Druecke Space um zu Starten!",550,350);
      
     	}else if(initGame == true) {
     		    	    		
     		d.drawDots(g);
+			i.drawCherry(g);
+			j.drawStrawberry(g);
     	    	
     		h1.drawRectangle(g);
     		h2.drawRectangle(g);

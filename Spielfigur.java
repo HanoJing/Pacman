@@ -10,8 +10,8 @@ public class Spielfigur {
 	public int arcAngle;
 	public Color farbe;
 
-	
-    public Spielfigur(int startX, int startY, int heigth, int width, int startAngle, int arcAngle, Color farbe) {
+
+	public Spielfigur(int startX, int startY, int heigth, int width, int startAngle, int arcAngle, Color farbe) {
 	  
 	    this.startX = startX;
 	    this.startY = startY;
@@ -50,7 +50,7 @@ public class Spielfigur {
      	}else if(KeyDispatcher.leftPressed == true && startX >= 30) {
      		this.startAngle = 210;
      		this.startX -= 50;
-     	}else if(KeyDispatcher.rightPressed == true && startX <= 1150) {
+     	}else if(KeyDispatcher.rightPressed == true && startX <= 1250) {
      		this.startAngle = 380;
      		this.startX += 50;
 		}
