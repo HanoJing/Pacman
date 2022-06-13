@@ -1,6 +1,6 @@
 import java.awt.event.*;
 import java.awt.*;
-
+//Hallo
 public class KeyDispatcher implements KeyEventDispatcher {
 
 	public static boolean upPressed;
