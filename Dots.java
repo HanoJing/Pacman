@@ -33,8 +33,7 @@ public class Dots {
 			for(x = 25; x < 1240; x+=50) {
 				g.setColor(Color.WHITE);
 				g.fillOval(x,y,size,size);
-				
-				//Hallo
+
 			}
 		}
 	}
