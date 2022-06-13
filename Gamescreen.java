@@ -240,7 +240,7 @@ public class Gamescreen extends JPanel{
     	for(int j = 1; j < d.yW.length-1; j++) {
     		for(int i = 1; i < d.xW.length-1; i++) {    	
     			if(pacMan.startY < d.yW[j] && pacMan.startY < d.yW[j+1] && pacMan.startY > d.yW[j-1] && pacMan.startX < d.xW[i] && pacMan.startX < d.xW[i+1] && pacMan.startX > d.xW[i-1]) {
-    				score++;
+    				score+=10;
       				hit = true;
     			}
     		}
