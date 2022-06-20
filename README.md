@@ -3,7 +3,9 @@ Pacman 2D as a school project, written in Java.
 
 Participants: Jonah (HanoJing), Eden (EdenBernhard), Melissa (Melisschen)
 
+
 !Wichtige Aufgaben!:
+
 
 • Map's: Punkte verschwinden beim Essen
 
@@ -11,7 +13,9 @@ Participants: Jonah (HanoJing), Eden (EdenBernhard), Melissa (Melisschen)
 
 • Map's: Gegner erstellen
 
+
 Noch offen stehende Aufgaben:
+
 
 • Lobby: Map Auswahl durch Knopfdruck
 
@@ -21,7 +25,9 @@ Noch offen stehende Aufgaben:
 
 • Map's: Punkte neuspawnen, wenn alle vorherigen gegessen wurden
 
+
 Schönheitsoperationen:
+
 
 • Lobby: Gestaltung (Überschrift/Map Auswahl...)
 
@@ -39,7 +45,9 @@ Schönheitsoperationen:
 
 • Map 3 ...
 
+
 Extra Specials:
+
 
 • Map's: fancy Musik 
 
