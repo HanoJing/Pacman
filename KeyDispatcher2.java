@@ -10,79 +10,77 @@ public class KeyDispatcher2 implements KeyEventDispatcher{
     public static boolean spacePressed;
     public static boolean enterPressed;
 
-    private Frame f;
-    private Gamescreen2 gs;
-    private int keyCode;
-    private int keyID;
+    private Frame f2;
+    private Gamescreen2 gs2;
+    private int keyCode2;
+    private int keyID2;
 
 
-    public KeyDispatcher2(Frame f, Gamescreen2 gs) {
-        this.f = f;
-        this.gs = gs;
+    public KeyDispatcher2(Frame f2, Gamescreen2 gs2) {
+        this.f2 = f2;
+        this.gs2 = gs2;
     }
 
 
     public boolean dispatchKeyEvent(KeyEvent e) {
-        this.keyCode = e.getKeyCode();
-        this.keyID = e.getID();
+        this.keyCode2 = e.getKeyCode();
+        this.keyID2 = e.getID();
 
 
 
-        if(this.keyID == KeyEvent.KEY_PRESSED){
+        if(this.keyID2 == KeyEvent.KEY_PRESSED){
 
-            if(this.keyCode == KeyEvent.VK_W || this.keyCode == KeyEvent.VK_UP) {
+            if(this.keyCode2 == KeyEvent.VK_W || this.keyCode2 == KeyEvent.VK_UP) {
                 upPressed = true;
-                this.gs.getPacMan().moveSpielfigur2();
-                gs.checkKollision();
-                if(gs.kollision == false) {
-                    f.repaint();
+                this.gs2.getPacMan().moveSpielfigur2();
+                gs2.checkKollision();gs2.score2();
+                if(gs2.kollision == false) {
+                    f2.repaint();
                 }else {
-                    this.gs.getPacMan().startY+=50;
+                    this.gs2.getPacMan().startY+=50;
                 }
                 upPressed = false;
             }
-            if(this.keyCode == KeyEvent.VK_A || this.keyCode== KeyEvent.VK_LEFT) {
+            if(this.keyCode2 == KeyEvent.VK_A || this.keyCode2== KeyEvent.VK_LEFT) {
                 leftPressed = true;
-                this.gs.getPacMan().moveSpielfigur2();
-                gs.checkKollision();
-                if(gs.kollision == false) {
-                    f.repaint();
+                this.gs2.getPacMan().moveSpielfigur2();
+                gs2.checkKollision();gs2.score2();
+                if(gs2.kollision == false) {
+                    f2.repaint();
                 }else {
-                    this.gs.getPacMan().startX+=50;
+                    this.gs2.getPacMan().startX+=50;
                 }
                 leftPressed = false;
             }
-            if(this.keyCode == KeyEvent.VK_S || this.keyCode == KeyEvent.VK_DOWN) {
+            if(this.keyCode2 == KeyEvent.VK_S || this.keyCode2 == KeyEvent.VK_DOWN) {
                 downPressed = true;
-                this.gs.getPacMan().moveSpielfigur2();
-                gs.checkKollision();
-                if(gs.kollision == false) {
-                    f.repaint();
+                this.gs2.getPacMan().moveSpielfigur2();
+                gs2.checkKollision();gs2.score2();
+                if(gs2.kollision == false) {
+                    f2.repaint();
                 }else {
-                    this.gs.getPacMan().startY-=50;
+                    this.gs2.getPacMan().startY-=50;
                 }
                 downPressed = false;
             }
-            if(this.keyCode == KeyEvent.VK_D || this.keyCode == KeyEvent.VK_RIGHT) {
+            if(this.keyCode2 == KeyEvent.VK_D || this.keyCode2 == KeyEvent.VK_RIGHT) {
                 rightPressed = true;
-                this.gs.getPacMan().moveSpielfigur2();
-                gs.checkKollision();
-                if(gs.kollision == false) {
-                    f.repaint();
+                this.gs2.getPacMan().moveSpielfigur2();
+                gs2.checkKollision();gs2.score2();
+                if(gs2.kollision == false) {
+                    f2.repaint();
                 }else {
-                    this.gs.getPacMan().startX-=50;
+                    this.gs2.getPacMan().startX-=50;
                 }
                 rightPressed = false;
             }
-            if(this.keyCode == KeyEvent.VK_SPACE) {
+            if(this.keyCode2 == KeyEvent.VK_SPACE) {
                 spacePressed = true;
-                //this.gs.initGame();
-                f.repaint();
+                f2.repaint();
             }
-            if(this.keyCode == KeyEvent.VK_ENTER) {
+            if(this.keyCode2 == KeyEvent.VK_ENTER) {
                 enterPressed = true;
-                //this.gs.initGame();
-                f.repaint();
+                f2.repaint();
             }
         }
         return true;

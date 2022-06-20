@@ -33,7 +33,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			if(this.keyCode == KeyEvent.VK_W || this.keyCode == KeyEvent.VK_UP) {
 				upPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
-				gs.checkKollision();
+				gs.checkKollision();gs.score();
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
@@ -44,7 +44,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			if(this.keyCode == KeyEvent.VK_A || this.keyCode== KeyEvent.VK_LEFT) {
 				leftPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
-				gs.checkKollision();
+				gs.checkKollision();gs.score();
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
@@ -55,7 +55,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			if(this.keyCode == KeyEvent.VK_S || this.keyCode == KeyEvent.VK_DOWN) {
 				downPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
-				gs.checkKollision();
+				gs.checkKollision();gs.score();
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
@@ -66,7 +66,7 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			if(this.keyCode == KeyEvent.VK_D || this.keyCode == KeyEvent.VK_RIGHT) {
 				rightPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
-				gs.checkKollision();
+				gs.checkKollision();gs.score();
 				if(gs.kollision == false) {
 					f.repaint();
 				}else {
@@ -76,13 +76,10 @@ public class KeyDispatcher implements KeyEventDispatcher {
 			}
 			if(this.keyCode == KeyEvent.VK_SPACE) {
 				spacePressed = true;
-
-				//this.gs.initGame();
 				f.repaint();
 			}
 			if(this.keyCode == KeyEvent.VK_ENTER) {
 				enterPressed = true;
-				//this.gs.initGame();
 				f.repaint();
 			}
 		}

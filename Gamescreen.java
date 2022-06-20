@@ -8,6 +8,7 @@ public class Gamescreen extends JPanel{
 	private Spielfigur pacMan;
 	
 	public boolean kollision = false;
+
 	
 	private Rectangle h1;
 	private Rectangle h2;
@@ -37,14 +38,13 @@ public class Gamescreen extends JPanel{
 	private Rectangle h26;
 	private Rectangle h27;
 	private Rectangle h28;
-	private Rectangle h29;
-	private Rectangle h30;
+
 
 	private Dots d;
 	private Icons i;
 	private Icons j;
+	private Icons k;
 
-	public boolean initGame = false;
 	
 	public int score = 0;
 	
@@ -79,35 +79,26 @@ public class Gamescreen extends JPanel{
 		h20 = new Rectangle(450,400,155,55);
 		h21 = new Rectangle(650,200,55,255);   //M
 		h22 = new Rectangle(750,200,55,255);
-		h23 = new Rectangle(700,250,55,105);
-		h24 = new Rectangle(850,200,55,255);   //A
-		h25 = new Rectangle(950,200,55,255);
-		h26 = new Rectangle(850,200,155,155);
-		h27 = new Rectangle(900,250,55,55);
-		h28 = new Rectangle(1050, 200, 55,255); //N
-		h29 = new Rectangle(1150,200,55,255);
-		h30 = new Rectangle(1100,300,55,105);
+		h23 = new Rectangle(850,200,55,255);   //A
+		h24 = new Rectangle(950,200,55,255);
+		h25 = new Rectangle(850,200,155,155);
+		h26 = new Rectangle(900,250,55,55);
+		h27 = new Rectangle(1050, 200, 55,255); //N
+		h28 = new Rectangle(1150,200,55,255);
 
     	
     	d = new Dots(this);
     	i = new Icons();
 		j = new Icons();
+		k = new Icons();
     	
-    	pacMan = new Spielfigur(615,315,30,30,380,360,Color.YELLOW);
+    	pacMan = new Spielfigur(613,313,30,30,380,360,Color.YELLOW);
 	}
     	
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
     	
     	setBackground(Color.BLACK);
-    	
-    	if(initGame == false) {
-    		
-    		g.setColor(Color.WHITE);
-			g.drawRoundRect(480,325,230,40,10,10);
-    		g.drawString("Druecke Space/Enter um zu Starten!",500,350);
-     
-    	}else if(initGame == true) {
     		
     		d.drawDots(g);
      	      		    		    			
@@ -139,11 +130,10 @@ public class Gamescreen extends JPanel{
 			h26.drawRectangle(g);
 			h27.drawRectangle(g);
 			h28.drawRectangle(g);
-			h29.drawRectangle(g);
-			h30.drawRectangle(g);
-			
+
+
 			g.setColor(Color.WHITE);
-			g.drawString("Score: "+score,600,680);
+			g.drawString(" "+score,670,690);
 
 			pacMan.drawSpielfigur(g);
 
@@ -151,11 +141,12 @@ public class Gamescreen extends JPanel{
 
 			i.drawCherry(g);
 			j.drawStrawberry(g);
+			k.drawScore(g);
 			
 	
     	}
     
-    }
+
    
     public Spielfigur getPacMan() {
 		return pacMan;
@@ -172,13 +163,13 @@ public class Gamescreen extends JPanel{
 		}else if(h4.x<=pacMan.startX && (h4.x+h4.width)>pacMan.startX && h4.y<=pacMan.startY && (h4.y+h4.height)>=pacMan.startY+pacMan.heigth) {
 				kollision = true;
 		}else if(h5.x<=pacMan.startX && (h5.x+h5.width)>pacMan.startX && h5.y<=pacMan.startY && (h5.y+h5.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h6.x<=pacMan.startX && (h6.x+h6.width)>pacMan.startX && h6.y<=pacMan.startY && (h6.y+h6.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h7.x<=pacMan.startX && (h7.x+h7.width)>pacMan.startX && h7.y<=pacMan.startY && (h7.y+h7.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h8.x<=pacMan.startX && (h8.x+h8.width)>pacMan.startX && h8.y<=pacMan.startY && (h8.y+h8.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h9.x<=pacMan.startX && (h9.x+h9.width)>pacMan.startX && h9.y<=pacMan.startY && (h9.y+h9.height)>=pacMan.startY+pacMan.heigth) {
 				kollision = true;
      	}else if(h10.x<=pacMan.startX && (h10.x+h10.width)>pacMan.startX && h10.y<=pacMan.startY && (h10.y+h10.height)>=pacMan.startY+pacMan.heigth) {
@@ -188,9 +179,9 @@ public class Gamescreen extends JPanel{
 		}else if(h12.x<=pacMan.startX && (h12.x+h12.width)>pacMan.startX && h12.y<=pacMan.startY && (h12.y+h12.height)>=pacMan.startY+pacMan.heigth) {
 				kollision = true;
 		}else if(h13.x<=pacMan.startX && (h13.x+h13.width)>pacMan.startX && h13.y<=pacMan.startY && (h13.y+h13.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h14.x<=pacMan.startX && (h14.x+h14.width)>pacMan.startX && h14.y<=pacMan.startY && (h14.y+h14.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
+			kollision = true;
 		}else if(h15.x<=pacMan.startX && (h15.x+h15.width)>pacMan.startX && h15.y<=pacMan.startY && (h15.y+h15.height)>=pacMan.startY+pacMan.heigth) {
 				kollision = true;
 		}else if(h16.x<=pacMan.startX && (h16.x+h16.width)>pacMan.startX && h16.y<=pacMan.startY && (h16.y+h16.height)>=pacMan.startY+pacMan.heigth) {
@@ -219,21 +210,9 @@ public class Gamescreen extends JPanel{
 				kollision = true;
 		}else if(h28.x<=pacMan.startX && (h28.x+h28.width)>pacMan.startX && h28.y<=pacMan.startY && (h28.y+h28.height)>=pacMan.startY+pacMan.heigth) {
 				kollision = true;
-		}else if(h29.x<=pacMan.startX && (h29.x+h29.width)>pacMan.startX && h29.y<=pacMan.startY && (h29.y+h29.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
-		}else if(h30.x<=pacMan.startX && (h30.x+h30.width)>pacMan.startX && h30.y<=pacMan.startY && (h30.y+h30.height)>=pacMan.startY+pacMan.heigth) {
-				kollision = true;
-		}else {
-				kollision = false;
-			}
 		}
-	
-    public void initGame() {
-    	
-    	if(KeyDispatcher.spacePressed == true || KeyDispatcher.enterPressed == true) {
-    		this.initGame = true;
-    	}
-    }
+
+	}
     
     public void score() {
       	    

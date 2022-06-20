@@ -1,10 +1,12 @@
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.Scanner;
 
 public class GUI {
 
     private Frame f;
     private Lobby painting;
+
 
 
     public GUI() {
@@ -18,7 +20,7 @@ public class GUI {
         Scanner s = new Scanner(System.in);
         int i = 0;
 
-        for(i = 0; i < 3 ; i++){
+        for(i = 0; i <= 3 ; i++){
             int help = s.nextInt();
 
             if (help == 1) {
@@ -29,6 +31,8 @@ public class GUI {
                 new GUI();
             }
         }
+
+
 
 
     }

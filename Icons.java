@@ -71,16 +71,41 @@ public class Icons {
 
     }
 
+    public void drawDiamant(Graphics g){
+
+        g.setColor(Color.pink);
+        g.fillRect(1222,672,22,2);
+        g.fillRect(1220,674,2,2);
+        g.fillRect(1218,676,2,6);
+        g.fillRect(1218,678,28,2);
+        g.fillRect(1244,674,2,2);
+        g.fillRect(1246,676,2,6);
+        g.fillRect(1232,676,2,20);
+        g.fillRect(1220,682,2,2);
+        g.fillRect(1222,684,2,2);
+        g.fillRect(1224,686,2,2);
+        g.fillRect(1226,688,2,2);
+        g.fillRect(1228,686,2,6);
+        g.fillRect(1230,692,6,2);
+        g.fillRect(1236,686,2,6);
+        g.fillRect(1238,688,2,2);
+        g.fillRect(1240,686,2,2);
+        g.fillRect(1242,684,2,2);
+        g.fillRect(1244,682,2,2);
+        g.fillRect(1226,682,2,4);
+        g.fillRect(1238,682,2,4);
+        g.fillRect(1240,676,2,6);
+        g.fillRect(1224,676,2,6);
+        g.fillRect(1230,674,2,2);
+        g.fillRect(1234,674,2,2);
+        g.fillRect(1226,674,2,2);
+        g.fillRect(1238,674,2,2);
+
+    }
 
     public void drawHeart(Graphics g){
 
     }
-
-
-    public void drawLoop(Graphics g){
-
-    }
-
 
     public void drawREADY(Graphics g){
 
@@ -88,6 +113,36 @@ public class Icons {
 
     public void drawScore(Graphics g){
 
+        g.setColor(Color.white);
+        g.fillRect(582,678,8,2);   //S
+        g.fillRect(580,680,4,4);
+        g.fillRect(588,680,4,2);
+        g.fillRect(582,684,10,2);
+        g.fillRect(590,686,4,4);
+        g.fillRect(582,690,10,2);
+        g.fillRect(580,688,4,2);
+        g.fillRect(600,678,8,2);   //C
+        g.fillRect(598,680,4,2);
+        g.fillRect(606,680,4,2);
+        g.fillRect(596,682,4,6);
+        g.fillRect(598,688,4,2);
+        g.fillRect(606,688,4,2);
+        g.fillRect(600,690,8,2);
+        g.fillRect(614,678,10,2);  //O
+        g.fillRect(612,680,4,10);
+        g.fillRect(622,680,4,10);
+        g.fillRect(614,690,10,2);
+        g.fillRect(628,678,12,2);  //R
+        g.fillRect(628,678,4,14);
+        g.fillRect(638,680,4,6);
+        g.fillRect(636,684,6,2);
+        g.fillRect(628,686,10,2);
+        g.fillRect(634,688,6,2);
+        g.fillRect(636,690,6,2);
+        g.fillRect(644,678,4,14);  //E
+        g.fillRect(648,678,10,2);
+        g.fillRect(648,684,8,2);
+        g.fillRect(648,690,10,2);
     }
 
 

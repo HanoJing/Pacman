@@ -9,6 +9,7 @@ public class Spielfigur {
 	public int startAngle;
 	public int arcAngle;
 	public Color farbe;
+	public boolean moveFigur = false;
 
 
 	public Spielfigur(int startX, int startY, int heigth, int width, int startAngle, int arcAngle, Color farbe) {
@@ -29,37 +30,40 @@ public class Spielfigur {
 		g.fillArc(15, 670, heigth, width, 380, 300);
 		g.fillArc(55, 670, heigth, width, 380, 300);
 		g.fillArc(95, 670, heigth, width, 380, 300);
+
 	}
     public void showSpielfigur(Graphics g) {
-	
-	    g.setColor(farbe);
-	    g.fillArc(startX, startY, heigth, width, startAngle, arcAngle);
-	    
-	}
 
-    public void moveSpielfigur() {
+		g.setColor(farbe);
+		g.fillArc(startX, startY, heigth, width, startAngle, arcAngle);
 
-		arcAngle = 300;
-   
-    	if(KeyDispatcher.upPressed == true && startY >= 30) {
-        	this.startAngle = 480;
-     		this.startY -= 50;
-     	}else if(KeyDispatcher.downPressed == true && startY <= 580) {
-     		this.startAngle = 300;
-     		this.startY += 50;
-     	}else if(KeyDispatcher.leftPressed == true && startX >= 30) {
-     		this.startAngle = 210;
-     		this.startX -= 50;
-     	}else if(KeyDispatcher.rightPressed == true && startX <= 1200) {
-     		this.startAngle = 380;
-     		this.startX += 50;
+		g.setColor(Color.BLACK);
+		if (moveFigur == true) {
+			g.fillRect(95, 670, heigth, width);
+
 		}
-    	
-    	
-    }
 
-    
-    
-  
-  
+		}
+
+	public void moveSpielfigur() {
+		arcAngle = 300;
+
+		if (KeyDispatcher.upPressed == true && startY >= 30) {
+			this.startAngle = 480;
+			this.startY -= 50;
+			moveFigur = true;
+		} else if (KeyDispatcher.downPressed == true && startY <= 580) {
+			this.startAngle = 300;
+			this.startY += 50;
+			moveFigur = true;
+		} else if (KeyDispatcher.leftPressed == true && startX >= 30) {
+			this.startAngle = 210;
+			this.startX -= 50;
+			moveFigur = true;
+		} else if (KeyDispatcher.rightPressed == true && startX <= 1200) {
+			this.startAngle = 380;
+			this.startX += 50;
+			moveFigur = true;
+		}
+	}
 }
