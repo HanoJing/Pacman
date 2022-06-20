@@ -7,11 +7,9 @@ public class Dots {
 	public int y;
 	public int[] xW = new int[27];
 	public int[] yW = new int[15];
-	public Gamescreen gs;
+	public Gamescreen_Original gs;
 	
-	public Dots(Gamescreen gs) {
-		
-		this.gs = gs;
+	public Dots() {
 		
 		int i = 0;
 		int j = 0;
@@ -38,7 +36,4 @@ public class Dots {
 		}
 	}
 		
-		
-				
-
 }

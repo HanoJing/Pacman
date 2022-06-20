@@ -1,7 +1,8 @@
 import java.awt.*;
+
 public class Icons {
 
-    public void drawCherry(Graphics g) {
+	public void drawCherry(Graphics g) {
 
         g.setColor(Color.orange);
         g.fillRect(1192, 678, 2, 2);
@@ -144,7 +145,5 @@ public class Icons {
         g.fillRect(648,684,8,2);
         g.fillRect(648,690,10,2);
     }
-
-
 
 }

@@ -1,16 +1,14 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class Lobby extends JPanel{
+public class Lobby extends JPanel {
 
-    private KeyboardFocusManager manager3;
+	private KeyboardFocusManager manager;
 
-    public Lobby(Frame f3) {
+    public Lobby(Frame f) {
 
-        this.manager3 = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        //this.manager3.addKeyEventDispatcher(new KeyDispatcherLobby(f3, this));
-
-
+        this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
+        this.manager.addKeyEventDispatcher(new KeyDispatcher_Lobby(f, this));
     }
 
         public void paintComponent (Graphics g){
@@ -28,5 +26,16 @@ public class Lobby extends JPanel{
 
         }
 
-    }
+        public void chooseMap(){
 
+            if(KeyDispatcher_Lobby.nullPressed == true){
+                new GUI_Lobby();
+            }else if(KeyDispatcher_Lobby.onePressed == true){
+                new GUI_Original();
+            }else if(KeyDispatcher_Lobby.twoPressed == true){
+                new GUI_Girly();
+            }else if(KeyDispatcher_Lobby.threePressed == true) {
+                System.out.println("Diese MAp exestiert noch nicht!");
+            }
+        }
+}
