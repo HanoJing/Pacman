@@ -2,7 +2,7 @@
 
 -----!Wichtige Aufgaben!:-----
 
-• Allgemein: Größe unabhängig von Frame
+• Allgemein: Größe unabhängig von Frame (dynamische Werte) (MELISSA)
 
 • Map's: Punkte verschwinden beim Essen
 
@@ -10,9 +10,9 @@
 
 • Map's: Gegner erstellen √
 
-• KeyListener
+• KeyListener (EDEN)
 
-• dynamische Werte
+
 
 -----Noch offen stehende Aufgaben:-----
 
