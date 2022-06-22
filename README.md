@@ -20,6 +20,8 @@
 
 • Map's: Punkte neuspawnen, wenn alle vorherigen gegessen wurden
 
+* Multithreading
+
 -----Schönheitsoperationen:-----
 
 • Lobby: Gestaltung (Überschrift/Map Auswahl...)
