@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.awt.*;
 
 public class Frame extends JFrame {
 
@@ -20,12 +21,20 @@ public class Frame extends JFrame {
         setTitle(this.title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(this.width, this.height);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        Keyboard k = new Keyboard();
+        addKeyListener(k);
         if(this.x==-1 && this.y == -1) {
             setLocationRelativeTo(null); //centers the jFrame on the screen
         }else {
             setLocation(this.x, this.y);
         }
         setVisible(true);
+
+        int monitorHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
+        int monitorWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
+
+        System.out.println(monitorHeight+ "      "+monitorWidth);
         
        
     }

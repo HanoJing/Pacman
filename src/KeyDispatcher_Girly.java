@@ -31,7 +31,8 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 			 if(this.keyCode == KeyEvent.VK_W || this.keyCode == KeyEvent.VK_UP) {
 				 upPressed = true;
 				 this.gs.getPacMan().moveSpielfigur_Girly();
-				 gs.checkKollision();gs.score(f);
+				 gs.checkKollision();
+				 gs.score(f);
 				 if(!gs.kollision) {
 					 f.repaint();
 				 }else {

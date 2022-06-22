@@ -48,22 +48,29 @@ public class Spielfigur_Original {
 	public void moveSpielfigur() {
 		arcAngle = 300;
 
-		if (KeyDispatcher_Original.upPressed && startY >= 30) {
-			this.startAngle = 480;
-			this.startY -= 50;
-			moveFigur = true;
-		} else if (KeyDispatcher_Original.downPressed && startY <= 580) {
-			this.startAngle = 300;
-			this.startY += 50;
-			moveFigur = true;
-		} else if (KeyDispatcher_Original.leftPressed && startX >= 30) {
-			this.startAngle = 210;
-			this.startX -= 50;
-			moveFigur = true;
-		} else if (KeyDispatcher_Original.rightPressed && startX <= 1200) {
-			this.startAngle = 380;
-			this.startX += 50;
-			moveFigur = true;
+		for(Rectangle_Original r : Map_Original.rect){
+			if(Util.checkKollision(r, Gamescreen_Original.getPacMan()) == false){
+				if (KeyDispatcher_Original.upPressed && startY >= 30) {
+					this.startAngle = 480;
+					this.startY -= 50;
+					moveFigur = true;
+				} else if (KeyDispatcher_Original.downPressed && startY <= 580) {
+					this.startAngle = 300;
+					this.startY += 50;
+					moveFigur = true;
+				} else if (KeyDispatcher_Original.leftPressed && startX >= 30) {
+					this.startAngle = 210;
+					this.startX -= 50;
+					moveFigur = true;
+				} else if (KeyDispatcher_Original.rightPressed && startX <= 1200) {
+					this.startAngle = 380;
+					this.startX += 50;
+					moveFigur = true;
+				}
+			}
+
 		}
+
+
 	}
 }

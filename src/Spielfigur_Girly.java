@@ -86,7 +86,6 @@ public class Spielfigur_Girly {
         }
     }
     public void showSpielfigur_Girly(Graphics g) {
-
         g.setColor(farbe);
         g.fillArc(startX, startY, width, heigth, startAngle, arcAngle);
 
