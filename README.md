@@ -10,6 +10,10 @@
 
 • Map's: Gegner erstellen √
 
+• KeyListener
+
+• dynamische Werte
+
 -----Noch offen stehende Aufgaben:-----
 
 • Lobby: Map Auswahl durch Knopfdruck
