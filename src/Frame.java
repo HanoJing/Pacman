@@ -17,7 +17,7 @@ public class Frame extends JFrame {
         this.height = height;
     }
     public void setupFrame() {
-    	setResizable(false);
+    	setResizable(true);
         setTitle(this.title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(this.width, this.height);
@@ -35,8 +35,18 @@ public class Frame extends JFrame {
         int monitorWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
 
         System.out.println(monitorHeight+ "      "+monitorWidth);
-        
-       
+
+
+        if(monitorHeight != 1440){
+            int berechneNeueHöhe = 900/(1440/monitorWidth);
+            int multiplikator = berechneNeueHöhe/monitorHeight;
+            System.out.println("neue Höhe: " +berechneNeueHöhe +"\nMultiplikator: " +multiplikator);
+        } else if(monitorWidth != 900){
+            int berechneNeueBreite = 1400/(900/monitorHeight);
+            int multiplikator = berechneNeueBreite/monitorWidth;
+            System.out.println("neue Breite: " +berechneNeueBreite +"\nMultiplikator: " +multiplikator);
+        }
+
     }
 
     public String getTitle() {

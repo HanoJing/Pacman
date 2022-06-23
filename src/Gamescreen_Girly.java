@@ -56,7 +56,7 @@ public class Gamescreen_Girly extends JPanel {
     public Spielfigur_Girly getPacMan() {
         return pacMan;
     }
-    public void checkKollision() {
+    /*public void checkKollision() {
 
         if(map.h1.x<=pacMan.startX && (map.h1.x+map.h1.width)>pacMan.startX && map.h1.y<=pacMan.startY && (map.h1.y+map.h1.height)>=pacMan.startY+pacMan.heigth) {
             kollision = true;
@@ -135,7 +135,7 @@ public class Gamescreen_Girly extends JPanel {
         }else {
         	kollision = false;
         }
-    }
+    }*/
 
     public void score(Frame f) {
 

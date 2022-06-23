@@ -31,7 +31,7 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 			 if(this.keyCode == KeyEvent.VK_W || this.keyCode == KeyEvent.VK_UP) {
 				 upPressed = true;
 				 this.gs.getPacMan().moveSpielfigur_Girly();
-				 gs.checkKollision();
+				 //gs.checkKollision();
 				 gs.score(f);
 				 if(!gs.kollision) {
 					 f.repaint();
@@ -43,7 +43,7 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 			 if(this.keyCode == KeyEvent.VK_A || this.keyCode== KeyEvent.VK_LEFT) {
 				 leftPressed = true;
 				 this.gs.getPacMan().moveSpielfigur_Girly();
-				 gs.checkKollision();gs.score(f);
+				 //gs.checkKollision();gs.score(f);
 				 if(!gs.kollision) {
 					 f.repaint();
 				 }else {
@@ -54,7 +54,7 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 			 if(this.keyCode == KeyEvent.VK_S || this.keyCode == KeyEvent.VK_DOWN) {
 				 downPressed = true;
 				 this.gs.getPacMan().moveSpielfigur_Girly();
-				 gs.checkKollision();gs.score(f);
+				 //gs.checkKollision();gs.score(f);
 				 if(!gs.kollision) {
 					 f.repaint();
 				 }else {
@@ -65,7 +65,7 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 			 if(this.keyCode == KeyEvent.VK_D || this.keyCode == KeyEvent.VK_RIGHT) {
 				 rightPressed = true;
 				 this.gs.getPacMan().moveSpielfigur_Girly();
-				 gs.checkKollision();gs.score(f);
+				 //gs.checkKollision();gs.score(f);
 				 if(!gs.kollision) {
 					 f.repaint();
 				 }else {

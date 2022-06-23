@@ -66,9 +66,9 @@ public class Spielfigur_Girly {
 
         g.setColor(Color.BLACK);
         g.fillRect(21,676,2,4);  //erste Schleife
-        g.fillRect(19,678,2,6);
+        g.fillRect(19,678,2,4);
         g.fillRect(13,680,2,4);
-        g.fillRect(25,672,2,6);
+        g.fillRect(25,672,2,4);
         g.fillRect(15,682,4,2);
         g.fillRect(21,676,4,2);
         g.fillRect(23,670,4,2);
@@ -80,6 +80,14 @@ public class Spielfigur_Girly {
         g.fillRect(55,682,4,2);
         g.fillRect(61,676,4,2);
         g.fillRect(63,670,4,2);
+
+        g.fillRect(101,676,2,2);  //dritte Schleife
+        g.fillRect(99,678,2,4);
+        g.fillRect(93,680,2,4);
+        g.fillRect(105,672,2,4);
+        g.fillRect(95,682,4,2);
+        g.fillRect(101,676,4,2);
+        g.fillRect(103,670,4,2);
 
         if(moveFigur2){
             g.fillRect(90,665,35,35);
