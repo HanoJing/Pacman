@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.security.Key;
 
 public class Spielfigur_Girly {
 
@@ -102,25 +103,28 @@ public class Spielfigur_Girly {
     public void moveSpielfigur_Girly() {
 
         arcAngle = 300;
-
-        if(KeyDispatcher_Girly.upPressed && startY >= 30) {
-            this.startAngle = 480;
-            this.startY -= 50;
-            moveFigur2 = true;
-        }else if(KeyDispatcher_Girly.downPressed && startY <= 580) {
-            this.startAngle = 300;
-            this.startY += 50;
-            moveFigur2 = true;
-        }else if(KeyDispatcher_Girly.leftPressed && startX >= 30) {
-            this.startAngle = 210;
-            this.startX -= 50;
-            moveFigur2 = true;
-        }else if(KeyDispatcher_Girly.rightPressed && startX <= 1200) {
-            this.startAngle = 380;
-            this.startX += 50;
-            moveFigur2 = true;
+        while(true) {
+            for (Rectangle_Girly r : Map_Girly.rect) {
+                if (Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan()) == false) {
+                    if (Keyboard.upPressed && startY >= 30) {
+                        this.startAngle = 480;
+                        this.startY -= 50;
+                        moveFigur2 = true;
+                    } else if (Keyboard.downPressed && startY <= 580) {
+                        this.startAngle = 300;
+                        this.startY += 50;
+                        moveFigur2 = true;
+                    } else if (Keyboard.leftPressed && startX >= 30) {
+                        this.startAngle = 210;
+                        this.startX -= 50;
+                        moveFigur2 = true;
+                    } else if (Keyboard.rightPressed && startX <= 1200) {
+                        this.startAngle = 380;
+                        this.startX += 50;
+                        moveFigur2 = true;
+                    }
+                }
+            }
         }
-
-
     }
 }
