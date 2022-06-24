@@ -1,3 +1,4 @@
+/*
 import java.awt.event.*;
 import java.awt.*;
 
@@ -85,3 +86,5 @@ public class KeyDispatcher_Girly implements KeyEventDispatcher {
 		 return true;
 	 }
 }
+
+ */

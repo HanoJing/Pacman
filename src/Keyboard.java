@@ -4,6 +4,18 @@ import java.awt.event.KeyListener;
 public class Keyboard implements KeyListener {
     public static boolean upPressed, leftPressed, downPressed, rightPressed, spacePressed, enterPressed, nullPressed, onePressed, twoPressed, threePressed;
 
+    static Keyboard instance;
+    private Keyboard(){ //Singleton Pattern
+
+    }
+
+    public static Keyboard getInstance(){
+        if(instance == null){
+            instance = new Keyboard();
+        }
+        return instance;
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 

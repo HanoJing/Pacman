@@ -1,13 +1,10 @@
 import java.awt.*;
 import javax.swing.*;
 public class Lobby extends JPanel {
-    private KeyboardFocusManager manager;
+
 
     public Lobby() {
-
-        this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-        this.manager.addKeyEventDispatcher(new KeyDispatcher_Lobby(this));
-
+        addKeyListener(Keyboard.getInstance());
     }
 
     public void paintComponent (Graphics g){
@@ -24,19 +21,30 @@ public class Lobby extends JPanel {
         g.drawString("Um zurueck in die Lobby zu kommen, gebe 0 in die Konsole ein!", 450, 425);
 
     }
-    public void chooseMap(){
+    public static void chooseMap(){
 
-        if(KeyDispatcher_Lobby.nullPressed){
-            new GUI_Lobby();
-        }
-        if(KeyDispatcher_Lobby.onePressed){
-            new GUI_Original();
-        }
-        if(KeyDispatcher_Lobby.twoPressed){
-            new GUI_Girly();
-        }
-        if(KeyDispatcher_Lobby.threePressed) {
-            System.out.println("Diese Map exestiert noch nicht!");
+        while(true){
+
+
+            if (Keyboard.nullPressed) {
+                new GUI_Lobby();
+            }
+            if (Keyboard.onePressed) {
+                new GUI_Original();
+            }
+            if (Keyboard.twoPressed) {
+                new GUI_Girly();
+            }
+            if (Keyboard.threePressed) {
+                System.out.println("Diese Map existiert noch nicht!");
+            }
+
+            //sleep 1 sec
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

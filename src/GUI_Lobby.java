@@ -8,6 +8,9 @@ public class GUI_Lobby {
 	        this.painting = new Lobby();
 	        f.getContentPane().add(this.painting);
 	        f.setupFrame();
+
+			Thread t2 = new Thread(() -> Lobby.chooseMap());
+			t2.start();
 	    }
 
 }

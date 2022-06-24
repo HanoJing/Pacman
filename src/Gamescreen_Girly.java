@@ -25,6 +25,7 @@ public class Gamescreen_Girly extends JPanel {
         j = new Icons();
 
 
+        System.out.println("Thread started");
         Thread t1 = new Thread(() -> Gamescreen_Girly.getPacMan().moveSpielfigur_Girly());
         t1.start();
 
