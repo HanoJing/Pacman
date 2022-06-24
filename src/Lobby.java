@@ -25,7 +25,6 @@ public class Lobby extends JPanel {
 
         while(true){
 
-
             if (Keyboard.nullPressed) {
                 new GUI_Lobby();
             }
