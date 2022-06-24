@@ -31,19 +31,19 @@ public class Frame extends JFrame {
         }
         setVisible(true);
 
-        int monitorHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
-        int monitorWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
+        double monitorHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
+        double monitorWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
 
         System.out.println(monitorHeight+ "      "+monitorWidth);
 
 
         if(monitorHeight != 1440){
-            int berechneNeueHöhe = 900/(1440/monitorWidth);
-            int multiplikator = berechneNeueHöhe/monitorHeight;
+            double berechneNeueHöhe = 900/ (1440/monitorWidth);
+            double multiplikator = berechneNeueHöhe/monitorHeight;
             System.out.println("neue Höhe: " +berechneNeueHöhe +"\nMultiplikator: " +multiplikator);
         } else if(monitorWidth != 900){
-            int berechneNeueBreite = 1400/(900/monitorHeight);
-            int multiplikator = berechneNeueBreite/monitorWidth;
+            double berechneNeueBreite = 1400/(900/monitorHeight);
+            double multiplikator = berechneNeueBreite/monitorWidth;
             System.out.println("neue Breite: " +berechneNeueBreite +"\nMultiplikator: " +multiplikator);
         }
 
