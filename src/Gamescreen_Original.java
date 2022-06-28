@@ -1,9 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 public class Gamescreen_Original extends JPanel {
-	private KeyboardFocusManager manager;
 	private static Spielfigur_Original pacMan;
 	private Map_Original map;
+
 	public boolean kollision = false;
 	private Dots d;
 	private Icons i;
@@ -11,22 +11,22 @@ public class Gamescreen_Original extends JPanel {
 	private Icons k;
 	public boolean initGame = false;
 	public int score = 0;
-	
 	public boolean hit = false;
 
 	
 	public Gamescreen_Original(Frame f) {
-		
-  		this.manager = KeyboardFocusManager.getCurrentKeyboardFocusManager();
-   		this.manager.addKeyEventDispatcher(new KeyDispatcher_Original(f, this));
+
+		addKeyListener(Keyboard.getInstance());
 
 		map = new Map_Original();
+
 		d = new Dots();
     	i = new Icons();
 		j = new Icons();
 		k = new Icons();
 
     	pacMan = new Spielfigur_Original(613,313,30,30,380,360,Color.YELLOW);
+
 	}
     	
     public void paintComponent(Graphics g) {
@@ -34,43 +34,29 @@ public class Gamescreen_Original extends JPanel {
     	
     	setBackground(Color.BLACK);
 
-		if(!initGame){
-			g.setColor(Color.WHITE);
-			g.drawRoundRect(550,250,200,50,10,10);
-			g.drawString("Drücke Space/Enter um zu starten",560,275);
+		d.drawDots(g);
+		map.drawMap_Original(g);
 
-		}else {
+		g.setColor(Color.WHITE);
+		g.drawString(" " + score, 670, 690);
 
+		pacMan.drawSpielfigur(g);
+		pacMan.showSpielfigur(g);
 
+		i.drawCherry(g);
+		j.drawStrawberry(g);
+		k.drawScore(g);
 
-
-			map.drawMap_Original(g);
-
-			g.setColor(Color.WHITE);
-			g.drawString(" " + score, 670, 690);
-
-			pacMan.drawSpielfigur(g);
-			pacMan.showSpielfigur(g);
-
-			i.drawCherry(g);
-			j.drawStrawberry(g);
-			k.drawScore(g);
-		}
 	}
-    
 
-   
-    public static Spielfigur_Original getPacMan() {
+	public Spielfigur_Original getPacMan() {
 		return pacMan;
 	}
-
-
-	
-
-
 	public void initGame(){
-		if(KeyDispatcher_Original.spacePressed || KeyDispatcher_Original.enterPressed){
-			initGame = true;
+		while (true) {
+			if (Keyboard.spacePressed || Keyboard.enterPressed) {
+				initGame = true;
+			}
 		}
 	}
     public void score() {

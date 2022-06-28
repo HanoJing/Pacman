@@ -4,13 +4,12 @@ public class GUI_Lobby {
 	private Lobby painting;
 	public GUI_Lobby() {
 
-	        f = new Frame("PacMan - Lobby", -1, -1, 1275, 740);
-	        this.painting = new Lobby();
-	        f.getContentPane().add(this.painting);
-	        f.setupFrame();
+		f = Game.f;
+		painting = Game.l;
+		f.getContentPane().add(painting);
+		f.setupFrame();
 
-			Thread t2 = new Thread(() -> Lobby.chooseMap());
-			t2.start();
-	    }
-
+		Thread t1 = new Thread(() -> Game.l.chooseMap());
+		t1.start();
+	}
 }

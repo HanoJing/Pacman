@@ -8,11 +8,6 @@ public class GUI_Girly {
         this.painting = new Gamescreen_Girly(f);
         f.getContentPane().add(this.painting);
         f.setupFrame();
-
-        Thread t1 = new Thread(this::printUpPressed);
-        t1.start();
-
-
     }
 
     public void printUpPressed(){
@@ -23,8 +18,6 @@ public class GUI_Girly {
                 e.printStackTrace();
             }
 
-            System.out.println("upPressed: " + Keyboard.upPressed);
-            System.out.println("twoPressed: " + Keyboard.twoPressed);
         }
     }
 }

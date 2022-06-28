@@ -100,13 +100,13 @@ public class Spielfigur_Girly {
 
     }
 
-    public void moveSpielfigur_Girly() {
+    /*public void moveSpielfigur_Girly() {
 
         arcAngle = 300;
         while(true) {
             for (Rectangle_Girly r : Map_Girly.rect) {
                 if (Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan()) == false) {
-                    if (Keyboard.upPressed && startY >= 30) {
+                    if (KeyDispatcher_Original.upPressed && startY >= 30) {
                         this.startAngle = 480;
                         this.startY -= 50;
                         moveFigur2 = true;
@@ -126,5 +126,5 @@ public class Spielfigur_Girly {
                 }
             }
         }
-    }
+    }*/
 }

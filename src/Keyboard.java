@@ -5,12 +5,13 @@ public class Keyboard implements KeyListener {
     public static boolean upPressed, leftPressed, downPressed, rightPressed, spacePressed, enterPressed, nullPressed, onePressed, twoPressed, threePressed;
 
     static Keyboard instance;
-    private Keyboard(){ //Singleton Pattern
+
+    private Keyboard() { //Singleton Pattern
 
     }
 
-    public static Keyboard getInstance(){
-        if(instance == null){
+    public static Keyboard getInstance() {
+        if (instance == null) {
             instance = new Keyboard();
         }
         return instance;
@@ -23,7 +24,7 @@ public class Keyboard implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        switch(e.getKeyCode()){
+        switch (e.getKeyCode()) {
             case KeyEvent.VK_W, KeyEvent.VK_UP -> upPressed = true;
             case KeyEvent.VK_A, KeyEvent.VK_LEFT -> leftPressed = true;
             case KeyEvent.VK_D, KeyEvent.VK_RIGHT -> rightPressed = true;
@@ -39,13 +40,13 @@ public class Keyboard implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        switch(e.getKeyCode()){
+        switch (e.getKeyCode()) {
             case KeyEvent.VK_W, KeyEvent.VK_UP -> upPressed = false;
             case KeyEvent.VK_A, KeyEvent.VK_LEFT -> leftPressed = false;
             case KeyEvent.VK_D, KeyEvent.VK_RIGHT -> rightPressed = false;
             case KeyEvent.VK_S, KeyEvent.VK_DOWN -> downPressed = false;
-            case KeyEvent.VK_SPACE -> spacePressed = false;
-            case KeyEvent.VK_ENTER -> enterPressed = false;
+            case KeyEvent.VK_SPACE -> spacePressed = true;
+            case KeyEvent.VK_ENTER -> enterPressed = true;
             case KeyEvent.VK_0 -> nullPressed = false;
             case KeyEvent.VK_1 -> onePressed = false;
             case KeyEvent.VK_2 -> twoPressed = false;

@@ -1,5 +1,6 @@
 import java.awt.event.*;
 import java.awt.*;
+/*
 public class KeyDispatcher_Original implements KeyEventDispatcher {
 	public static boolean upPressed;
 	public static boolean leftPressed;
@@ -61,7 +62,7 @@ public class KeyDispatcher_Original implements KeyEventDispatcher {
 				rightPressed = true;
 				this.gs.getPacMan().moveSpielfigur();
 				//gs.checkKollision();gs.score();
-				if(!gs.kollision) {
+				if(!Game.gs_O.kollision) {
 					f.repaint();
 				}else {
 					this.gs.getPacMan().startX-=50;
@@ -69,16 +70,17 @@ public class KeyDispatcher_Original implements KeyEventDispatcher {
 				rightPressed = false;
 			}
 			if(this.keyCode == KeyEvent.VK_SPACE) {
+				System.out.println("PlaPla");
 				spacePressed = true;
-				gs.initGame();
+				Game.gs_O.initGame();
 				f.repaint();
 			}
 			if(this.keyCode == KeyEvent.VK_ENTER) {
 				enterPressed = true;
-				gs.initGame();
+				Game.gs_O.initGame();
 				f.repaint();
 			}
 		}
 		return true;
 	}
-}
+}*/

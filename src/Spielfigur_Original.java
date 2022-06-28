@@ -23,7 +23,6 @@ public class Spielfigur_Original {
 	    this.farbe = farbe;
 	 
     }
-
 	public void drawSpielfigur(Graphics g){
 
 		g.setColor(farbe);
@@ -42,35 +41,31 @@ public class Spielfigur_Original {
 			g.fillRect(95, 670, width, heigth);
 
 		}
-
-		}
-
+	}
 	public void moveSpielfigur() {
 		arcAngle = 300;
-
-		for(Rectangle_Original r : Map_Original.rect){
-			if(Util.checkKollision(r, Gamescreen_Original.getPacMan()) == false){
-				if (Keyboard.upPressed && startY >= 30) {
-					this.startAngle = 480;
-					this.startY -= 50;
-					moveFigur = true;
-				} else if (Keyboard.downPressed && startY <= 580) {
-					this.startAngle = 300;
-					this.startY += 50;
-					moveFigur = true;
-				} else if (Keyboard.leftPressed && startX >= 30) {
-					this.startAngle = 210;
-					this.startX -= 50;
-					moveFigur = true;
-				} else if (Keyboard.rightPressed && startX <= 1200) {
-					this.startAngle = 380;
-					this.startX += 50;
-					moveFigur = true;
+		while(true) {
+			for (Rectangle_Original r : Map_Original.rect) {
+				if (Util.checkKollision(r, Game.gs_O.getPacMan()) == false) {
+					if (Keyboard.upPressed && startY >= 30) {
+						this.startAngle = 480;
+						this.startY -= 50;
+						moveFigur = true;
+					} else if (Keyboard.downPressed && startY <= 580) {
+						this.startAngle = 300;
+						this.startY += 50;
+						moveFigur = true;
+					} else if (Keyboard.leftPressed && startX >= 30) {
+						this.startAngle = 210;
+						this.startX -= 50;
+						moveFigur = true;
+					} else if (Keyboard.rightPressed && startX <= 1200) {
+						this.startAngle = 380;
+						this.startX += 50;
+						moveFigur = true;
+					}
 				}
 			}
-
 		}
-
-
 	}
 }

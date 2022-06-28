@@ -21,7 +21,7 @@ public class Frame extends JFrame {
         setTitle(this.title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(this.width, this.height);
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         Keyboard k = Keyboard.getInstance();
         addKeyListener(k);
         if(this.x==-1 && this.y == -1) {
@@ -35,17 +35,6 @@ public class Frame extends JFrame {
         double monitorWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
 
         System.out.println(monitorHeight+ "      "+monitorWidth);
-
-
-        if(monitorHeight != 1440){
-            double berechneNeueHöhe = 900/ (1440/monitorWidth);
-            double multiplikator = berechneNeueHöhe/monitorHeight;
-            System.out.println("neue Höhe: " +berechneNeueHöhe +"\nMultiplikator: " +multiplikator);
-        } else if(monitorWidth != 900){
-            double berechneNeueBreite = 1400/(900/monitorHeight);
-            double multiplikator = berechneNeueBreite/monitorWidth;
-            System.out.println("neue Breite: " +berechneNeueBreite +"\nMultiplikator: " +multiplikator);
-        }
 
     }
 

@@ -3,6 +3,7 @@ import java.awt.*;
 public class Gamescreen_Girly extends JPanel {
     private Map_Girly map;
     private static Spielfigur_Girly pacMan;
+
     public boolean kollision = false;
     private Dots d;
     private Icons i;
@@ -15,20 +16,13 @@ public class Gamescreen_Girly extends JPanel {
 
     public Gamescreen_Girly(Frame f) {
 
-        map = new Map_Girly();
+        map = Game.m2;
 
         d = new Dots();
-        
-        pacMan = new Spielfigur_Girly(613,163,30,30,380,360,Color.YELLOW);
-
         i = new Icons();
         j = new Icons();
 
-
-        System.out.println("Thread started");
-        Thread t1 = new Thread(() -> Gamescreen_Girly.getPacMan().moveSpielfigur_Girly());
-        t1.start();
-
+        pacMan = Game.pacMan_Girly;
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
