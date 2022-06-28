@@ -70,8 +70,8 @@ public class Icons {
     }
     public void drawDiamant(Graphics g){
 
-        Color deepPink = new Color(255, 20, 147);
-        g.setColor(deepPink);
+        Color hotPink = new Color(255,105,180);
+        g.setColor(hotPink);
         g.fillRect(1222,672,22,2);
         g.fillRect(1220,674,2,2);
         g.fillRect(1218,676,2,6);

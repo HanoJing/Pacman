@@ -16,6 +16,7 @@ public class Rectangle_Girly {
     public void drawRectangle_Girly(Graphics g){
         g.setColor(Color.BLACK);
         g.fillRect(410,250,30,110);
+        g.fillRect(570,370,83,83);
         g.fillRoundRect(this.x,this.y,this.width,this.height,10,10);
         g.setColor(Color.MAGENTA);
         g.drawRoundRect(this.x,this.y,this.width,this.height,10,10);
