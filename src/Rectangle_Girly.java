@@ -16,6 +16,7 @@ public class Rectangle_Girly {
     public void drawRectangle_Girly(Graphics g){
         g.setColor(Color.BLACK);
         g.fillRect(410,250,30,110);
+        g.fillRect(570,370,83,83);
         g.fillRoundRect(this.x,this.y,this.width,this.height,10,10);
         g.setColor(Color.MAGENTA);
         g.drawRoundRect(this.x,this.y,this.width,this.height,10,10);
@@ -32,6 +33,18 @@ public class Rectangle_Girly {
         g.fillRoundRect(450,500,105,55,10,10);
         g.fillRoundRect(500,500,55,153,10,10);
         g.fillRoundRect(500,4,55,149,10,10);
+        g.fillRoundRect(200,200,55,255,10,10);
+        g.fillRoundRect(200,400,155,55,10,10);
+        g.fillRoundRect(850,300,155,55,10,10);
+        g.fillRoundRect(150, 50, 255, 55,10,10);
+        g.fillRoundRect(850,50,255,55,10,10);
+        g.fillRoundRect(150, 550, 255, 55,10,10);
+        g.fillRoundRect(850,550,255,55,10,10);
+        g.fillRoundRect(450, 100, 105, 55,10,10);
+        g.fillRoundRect(700, 100, 105, 55,10,10);
+        g.fillRoundRect(700,200,55,255,10,10);
+        g.fillRoundRect(500,305,90,85,10,10);
+        g.fillRoundRect(500,200,150,50,10,10);
         //g.fillRoundRect(664,414,40,40,10,10);
         //g.fillRoundRect(600,350,40,40,10,10);
         g.fillRoundRect(700,4,49,149,10,10);
