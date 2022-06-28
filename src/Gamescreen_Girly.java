@@ -16,13 +16,13 @@ public class Gamescreen_Girly extends JPanel {
 
     public Gamescreen_Girly(Frame f) {
 
-        map = Game.m2;
+        map = new Map_Girly();
 
         d = new Dots();
         i = new Icons();
         j = new Icons();
 
-        pacMan = Game.pacMan_Girly;
+        pacMan = new Spielfigur_Girly(265,365,30,30,380,360,Color.YELLOW);
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -5,7 +5,7 @@ public class GUI_Girly {
     public GUI_Girly() {
 
         f = new Frame("PacMan - Mrs.PacMan", -1, -1, 1279, 763);
-        this.painting = Game.gs_G;
+        this.painting = new Gamescreen_Girly(f);
         f.getContentPane().add(this.painting);
         f.setupFrame();
     }

@@ -43,6 +43,7 @@ public class Spielfigur_Original {
 		}
 	}
 	public void moveSpielfigur() {
+
 		arcAngle = 300;
 		while(true) {
 			for (Rectangle_Original r : Map_Original.rect) {

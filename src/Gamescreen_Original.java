@@ -1,10 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 public class Gamescreen_Original extends JPanel {
-	private KeyboardFocusManager manager;
 	private static Spielfigur_Original pacMan;
 	private Map_Original map;
-	public boolean kollision = false;
 	private Dots d;
 	private Icons i;
 	private Icons j;

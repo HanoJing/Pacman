@@ -11,8 +11,7 @@ public class Game {
 		f = new Frame("PACMAN-Lobby",-1,-1,1279, 763);
 		l = new Lobby();
 
-		gs_O = new Gamescreen_Original();
-		gs_G = new Gamescreen_Girly(f);
+
 
 		new GUI_Lobby();
 
