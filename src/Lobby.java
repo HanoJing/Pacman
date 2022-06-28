@@ -2,9 +2,22 @@ import java.awt.*;
 import javax.swing.*;
 public class Lobby extends JPanel {
 
+    private Geister b;
+    private Geister p;
+    private Geister c;
+    private Geister i;
+    private Geister s;
+
      public Lobby() {
 
          addKeyListener(Keyboard.getInstance());
+
+         b = new Geister();
+         p = new Geister();
+         c = new Geister();
+         i = new Geister();
+         s = new Geister();
+
      }
 
     public void paintComponent (Graphics g){
@@ -20,6 +33,11 @@ public class Lobby extends JPanel {
         g.drawString("Gebe in die Konsole 1 ein, um die erste Map zu oeffnen oder 2 um die zweite Map zu oeffnen!", 350, 400);
         g.drawString("Um zurueck in die Lobby zu kommen, gebe 0 in die Konsole ein!", 450, 425);
 
+        b.drawBlinky(g);
+        p.drawPinky(g);
+        c.drawClyde(g);
+        i.drawInky(g);
+        s.drawSady(g);
 
     }
     public static void chooseMap() {

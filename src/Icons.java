@@ -2,7 +2,8 @@ import java.awt.*;
 public class Icons {
     public void drawCherry(Graphics g) {
 
-        g.setColor(Color.orange);
+        Color peru = new Color(205, 133, 63);
+        g.setColor(peru);
         g.fillRect(1192, 678, 2, 2);
         g.fillRect(1194, 676, 4, 2);
         g.fillRect(1198, 674, 8, 2);
@@ -69,7 +70,8 @@ public class Icons {
     }
     public void drawDiamant(Graphics g){
 
-        g.setColor(Color.pink);
+        Color deepPink = new Color(255, 20, 147);
+        g.setColor(deepPink);
         g.fillRect(1222,672,22,2);
         g.fillRect(1220,674,2,2);
         g.fillRect(1218,676,2,6);

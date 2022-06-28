@@ -66,7 +66,7 @@ public class Spielfigur_Girly {
         g.fillRect(97,676,2,2);
 
         g.setColor(Color.BLACK);
-        g.fillRect(21,676,2,4);  //erste Schleife
+        g.fillRect(21,676,2,2);  //erste Schleife
         g.fillRect(19,678,2,4);
         g.fillRect(13,680,2,4);
         g.fillRect(25,672,2,4);
