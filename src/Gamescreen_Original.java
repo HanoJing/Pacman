@@ -15,7 +15,7 @@ public class Gamescreen_Original extends JPanel {
 	public boolean hit = false;
 
 	
-	public Gamescreen_Original(Frame f) {
+	public Gamescreen_Original() {
 
 
 		map = new Map_Original();
@@ -33,9 +33,8 @@ public class Gamescreen_Original extends JPanel {
     	setBackground(Color.BLACK);
 
 
-
-
-			map.drawMap_Original(g);
+		d.drawDots(g);
+		map.drawMap_Original(g);
 
 			g.setColor(Color.WHITE);
 			g.drawString(" " + score, 670, 690);
