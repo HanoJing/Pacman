@@ -55,7 +55,7 @@ public class Lobby extends JPanel {
                 break;
             }
             if (Keyboard.threePressed) {
-                System.out.println("Diese Map exestiert noch nicht!");
+                System.out.println("Diese Map existiert noch nicht!");
                 break;
             }
             try {
