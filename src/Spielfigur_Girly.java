@@ -2,8 +2,7 @@ import java.awt.*;
 import java.security.Key;
 
 public class Spielfigur_Girly {
-
-
+    public Frame f = GUI_Girly.f;
     public int startX;
     public int startY;
     public int heigth;
@@ -11,7 +10,7 @@ public class Spielfigur_Girly {
     public int startAngle;
     public int arcAngle;
     public Color farbe;
-    public boolean moveFigur2 = false;
+    public boolean moveFigur_Girly = false;
 
 
     public Spielfigur_Girly(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
@@ -21,7 +20,7 @@ public class Spielfigur_Girly {
         this.width = width;
         this.heigth = heigth;
         this.startAngle = startAngle;
-        this.arcAngle = arcAngle;
+        this.arcAngle = 300;
         this.farbe = farbe;
 
     }
@@ -90,7 +89,7 @@ public class Spielfigur_Girly {
         g.fillRect(101,676,4,2);
         g.fillRect(103,670,4,2);
 
-        if(moveFigur2){
+        if(moveFigur_Girly){
             g.fillRect(90,665,35,35);
         }
     }
@@ -100,31 +99,69 @@ public class Spielfigur_Girly {
 
     }
 
-    /*public void moveSpielfigur_Girly() {
+    public void moveSpielfigur_Girly() {
 
-        arcAngle = 300;
-        while(true) {
-            for (Rectangle_Girly r : Map_Girly.rect) {
-                if (Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan()) == false) {
-                    if (KeyDispatcher_Original.upPressed && startY >= 30) {
-                        this.startAngle = 480;
-                        this.startY -= 50;
-                        moveFigur2 = true;
-                    } else if (Keyboard.downPressed && startY <= 580) {
-                        this.startAngle = 300;
+        while (true){
+            if (Keyboard.upPressed && startY >= 30) {
+                moveFigur_Girly = true;
+                this.startAngle = 480;
+                this.startY -= 50;
+                for (Rectangle_Girly r : Map_Girly.rect) {
+                    if(!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())){
+                        f.repaint();
+                    }else{
                         this.startY += 50;
-                        moveFigur2 = true;
-                    } else if (Keyboard.leftPressed && startX >= 30) {
-                        this.startAngle = 210;
-                        this.startX -= 50;
-                        moveFigur2 = true;
-                    } else if (Keyboard.rightPressed && startX <= 1200) {
-                        this.startAngle = 380;
-                        this.startX += 50;
-                        moveFigur2 = true;
+                        f.repaint();
                     }
                 }
+                Util.sleep();
+            } else if (Keyboard.downPressed && startY <= 580) {
+                moveFigur_Girly = true;
+                this.startAngle = 300;
+                this.startY += 50;
+                for (Rectangle_Girly r : Map_Girly.rect) {
+                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                        f.repaint();
+                    } else {
+                        this.startY -= 50;
+                        f.repaint();
+                    }
+                }
+                Util.sleep();
+            } else if (Keyboard.leftPressed && startX >= 30) {
+                moveFigur_Girly = true;
+                this.startAngle = 210;
+                this.startX -= 50;
+                for (Rectangle_Girly r : Map_Girly.rect) {
+                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                        f.repaint();
+                    } else {
+                        this.startX += 50;
+                        f.repaint();
+                    }
+                }
+                Util.sleep();
+            } else if (Keyboard.rightPressed && startX <= 1200) {
+                moveFigur_Girly = true;
+                this.startAngle = 380;
+                this.startX += 50;
+                for (Rectangle_Girly r : Map_Girly.rect) {
+                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                        f.repaint();
+                    } else {
+                        this.startX -= 50;
+                        f.repaint();
+                    }
+                }
+                Util.sleep();
+            }
+
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+
             }
         }
-    }*/
+    }
 }

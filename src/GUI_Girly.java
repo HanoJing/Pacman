@@ -1,6 +1,6 @@
 
 public class GUI_Girly {
-    private Frame f;
+    public static Frame f;
     private Gamescreen_Girly painting;
     public GUI_Girly() {
 
@@ -8,6 +8,9 @@ public class GUI_Girly {
         this.painting = new Gamescreen_Girly(f);
         f.getContentPane().add(this.painting);
         f.setupFrame();
+
+        Thread t3 = new Thread(() -> Gamescreen_Girly.getPacMan().moveSpielfigur_Girly());
+        t3.start();
     }
 
 }

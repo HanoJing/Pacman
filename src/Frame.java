@@ -21,7 +21,7 @@ public class Frame extends JFrame {
         setTitle(this.title);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(this.width, this.height);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
         Keyboard k = Keyboard.getInstance();
         addKeyListener(k);
         if(this.x==-1 && this.y == -1) {
