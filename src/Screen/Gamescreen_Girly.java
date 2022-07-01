@@ -1,9 +1,15 @@
+package Screen;
+
 import javax.swing.*;
 import java.awt.*;
-import Geisterchen.Blinky;
+import Ghosts.Blinky;
+import Map.Dots;
+import Map.Map_Girly;
+import Player.Player_Girly;
+import Map.Icons;
 public class Gamescreen_Girly extends JPanel {
     private Map_Girly map;
-    private static Spielfigur_Girly pacMan;
+    private static Player_Girly pacMan;
 
     private Dots d;
     private Icons i;
@@ -25,7 +31,7 @@ public class Gamescreen_Girly extends JPanel {
 
         blinky = new Blinky(15,315);
 
-        pacMan = new Spielfigur_Girly(265,365,30,30,380,360,Color.YELLOW);
+        pacMan = new Player_Girly(265,365,30,30,380,360,Color.YELLOW);
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -52,11 +58,11 @@ public class Gamescreen_Girly extends JPanel {
         g.setColor(Color.WHITE);
         g.drawString(" "+score,670,690);
     }
-    public static Spielfigur_Girly getPacMan() {
+    public static Player_Girly getPacMan() {
         return pacMan;
     }
 
-    public void score(Frame f) {
+   /* public void score(GUI.Frame f) {
 
         for(y = 1; y < d.yW.length-1; y++) {
             for(x= 1; x < d.xW.length-1; x++) {
@@ -67,5 +73,5 @@ public class Gamescreen_Girly extends JPanel {
             }
         }
         System.out.println(hit);
-    }
+    }*/
 }

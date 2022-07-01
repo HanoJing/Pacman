@@ -1,3 +1,7 @@
+package GUI;
+
+import Util.Keyboard;
+
 import javax.swing.JFrame;
 import java.awt.*;
 

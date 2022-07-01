@@ -1,3 +1,5 @@
+package Map;
+
 import java.awt.*;
 
 public class Rectangle_Original {

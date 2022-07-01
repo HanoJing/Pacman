@@ -1,19 +1,18 @@
-package Geisterchen;
+package Ghosts;
 
 import java.awt.*;
 
-public class Inky {
+public class Sady {
 
         public static int startX;
         public static int startY;
 
-        public Inky(int startX,int startY){
+        public Sady(int startX,int startY){
             this.startX = startX;
             this.startY = startY;
         }
-
-    public void drawInky(Graphics g){
-        g.setColor(Color.cyan);
+    public void drawSady(Graphics g){
+        g.setColor(Color.blue);
         g.fillRect(startX+10,startY,8,2);
         g.fillRect(startX+6,startY+2,16,2);
         g.fillRect(startX+4,startY+4,20,20);
@@ -25,14 +24,15 @@ public class Inky {
         g.fillRect(startX+8,startY+26,4,2);
         g.fillRect(startX+16,startY+24,6,2);
         g.fillRect(startX+16,startY+26,4,2);
-        //Augen nach oben schauend
         g.setColor(Color.white);
-        g.fillRect(startX+6,startY+6,4,10);
-        g.fillRect(startX+4,startY+8,8,6);
-        g.fillRect(startX+18,startY+6,4,10);
-        g.fillRect(startX+16,startY+8,8,6);
-        g.setColor(Color.blue);
-        g.fillRect(startX+6,startY+6,4,4);
-        g.fillRect(startX+18,startY+6,4,4);
+        g.fillRect(startX+8,startY+10,4,4);
+        g.fillRect(startX+16,startY+10,4,4);
+        g.fillRect(startX+4,startY+18,4,2);
+        g.fillRect(startX+12,startY+18,4,2);
+        g.fillRect(startX+20,startY+18,4,2);
+        g.fillRect(startX+2,startY+20,2,2);
+        g.fillRect(startX+8,startY+20,4,2);
+        g.fillRect(startX+16,startY+20,4,2);
+        g.fillRect(startX+24,startY+20,2,2);
     }
 }

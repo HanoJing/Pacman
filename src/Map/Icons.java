@@ -1,3 +1,5 @@
+package Map;
+
 import java.awt.*;
 public class Icons {
     public void drawCherry(Graphics g) {

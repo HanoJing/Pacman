@@ -1,5 +1,14 @@
+package Player;
+
+import GUI.GUI_Original;
+import Map.Map_Original;
+import Map.Rectangle_Original;
+import Screen.Gamescreen_Original;
+import Util.Keyboard;
+import Util.Util;
+
 import java.awt.*;
-public class Spielfigur_Original {
+public class Player_Original {
 	public Frame f = GUI_Original.f;
 	public static int startX;
 	public static int startY;
@@ -11,7 +20,7 @@ public class Spielfigur_Original {
 	public boolean moveFigur = false;
 
 
-	public Spielfigur_Original(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
+	public Player_Original(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
 
 		this.startX = startX;
 		this.startY = startY;

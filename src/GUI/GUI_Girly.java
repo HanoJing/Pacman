@@ -1,3 +1,6 @@
+package GUI;
+
+import Screen.Gamescreen_Girly;
 
 public class GUI_Girly {
     public static Frame f;

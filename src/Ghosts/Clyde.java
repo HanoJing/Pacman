@@ -1,4 +1,4 @@
-package Geisterchen;
+package Ghosts;
 
 import java.awt.*;
 

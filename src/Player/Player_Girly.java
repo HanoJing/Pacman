@@ -1,7 +1,15 @@
-import java.awt.*;
-import java.security.Key;
+package Player;
 
-public class Spielfigur_Girly {
+import GUI.GUI_Girly;
+import Map.Map_Girly;
+import Map.Rectangle_Girly;
+import Screen.Gamescreen_Girly;
+import Util.Keyboard;
+import Util.Util;
+
+import java.awt.*;
+
+public class Player_Girly {
     public Frame f = GUI_Girly.f;
     public int startX;
     public int startY;
@@ -13,7 +21,7 @@ public class Spielfigur_Girly {
     public boolean moveFigur_Girly = false;
 
 
-    public Spielfigur_Girly(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
+    public Player_Girly(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
 
         this.startX = startX;
         this.startY = startY;

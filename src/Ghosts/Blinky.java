@@ -1,7 +1,6 @@
-package Geisterchen;
+package Ghosts;
 
 import java.awt.*;
-
 public class Blinky {
     public static int startX;
     public static int startY;

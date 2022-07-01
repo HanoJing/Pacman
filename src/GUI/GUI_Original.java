@@ -1,3 +1,7 @@
+package GUI;
+
+import Screen.Gamescreen_Original;
+
 public class GUI_Original {
 
     public static Frame f;
