@@ -7,9 +7,8 @@ public class Gamescreen_Original extends JPanel {
 	private Icons i;
 	private Icons j;
 	private Icons k;
-	public boolean initGame = false;
+
 	public int score = 0;
-	
 	public boolean hit = false;
 
 	
