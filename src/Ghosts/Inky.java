@@ -11,6 +11,7 @@ public class Inky {
         public static boolean oben;
         public static boolean unten;
 
+
     public Inky(int startX,int startY,boolean links,boolean rechts,boolean oben,boolean unten){
         this.startX = startX;
         this.startY = startY;

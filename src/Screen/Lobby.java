@@ -11,6 +11,7 @@ import Ghosts.Clyde;
 import Ghosts.Inky;
 import Ghosts.Pinky;
 import Ghosts.Sady;
+import Player.Player_Original;
 import Util.Keyboard;
 
 public class Lobby extends JPanel {
@@ -20,16 +21,18 @@ public class Lobby extends JPanel {
     private Inky i;
     private Pinky p;
     private Sady s;
+    private Player_Original pacman;
 
      public Lobby() {
 
          addKeyListener(Keyboard.getInstance());
 
-         b = new Blinky(1020,575);
-         c = new Clyde(1060,575);
-         i = new Inky(1100,575);
-         //p = new Pinky(1140,575);
-         s = new Sady(1180,575);
+
+         b = new Blinky(1020, 625, true, false, false, false);
+         c = new Clyde(1060, 625, true, false, false, false);
+         i = new Inky(1100, 625, true, false, false, false);
+         p = new Pinky(1140, 625, true, false, false, false);
+         pacman = new Player_Original(950, 625, 30, 30, 210, 380, Color.YELLOW);
 
      }
 
@@ -39,19 +42,23 @@ public class Lobby extends JPanel {
         setBackground(Color.BLACK);
 
         g.setColor(Color.YELLOW);
-        g.drawRoundRect(530, 325, 230, 40, 10, 10);
-        g.drawString("WILLKOMMEN IN DER LOBBY!!!", 550, 350);
+        g.drawRoundRect(575, 325, 150, 40, 10, 10);
+        g.drawString("PAC-MAN", 620, 350);
 
         g.setColor(Color.white);
-        g.drawString("Gebe in die Konsole 1 ein, um die erste Map zu oeffnen oder 2 um die zweite Map zu oeffnen!", 350, 400);
-        g.drawString("Um zurueck in die Screen.Lobby zu kommen, gebe 0 in die Konsole ein!", 450, 425);
+        g.drawString("Drücke 1 um die Originale Pac-Man Welt zu öffnen!", 500, 400);
+        g.drawString("Drücke 2 um die Girly-Edition Pac-Man Welt zu öffnen!", 490, 425);
+
+        g.fillOval(930, 637, 5, 5);
+        g.fillOval(900, 637, 5, 5);
+        g.fillOval(870, 637, 5, 5);
 
         b.drawBlinky(g);
-        //p.drawPinky(g);
+        p.drawPinky(g);
         c.drawClyde(g);
         i.drawInky(g);
-        s.drawSady(g);
 
+        pacman.showSpielfigur(g);
     }
     public static void chooseMap() {
         while(true) {

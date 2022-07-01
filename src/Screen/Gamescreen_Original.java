@@ -2,6 +2,7 @@ package Screen;
 
 import javax.swing.*;
 import java.awt.*;
+import Ghosts.*;
 import Player.Player_Original;
 import Map.Dots;
 import Map.Map_Original;

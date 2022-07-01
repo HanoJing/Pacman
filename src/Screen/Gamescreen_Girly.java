@@ -16,7 +16,6 @@ public class Gamescreen_Girly extends JPanel {
     private Icons j;
     private Blinky blinky;
     public int score = 0;
-    public boolean hit = false;
 
     public int x;
     public int y;
@@ -29,7 +28,7 @@ public class Gamescreen_Girly extends JPanel {
         i = new Icons();
         j = new Icons();
 
-        blinky = new Blinky(15,315);
+        blinky = new Blinky(15,315,false,true,false,false);
 
         pacMan = new Player_Girly(265,365,30,30,380,360,Color.YELLOW);
     }
