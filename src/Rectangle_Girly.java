@@ -17,12 +17,12 @@ public class Rectangle_Girly {
         g.setColor(Color.BLACK);
         g.fillRect(410,250,30,110);
         g.fillRect(570,370,83,83);
+        g.fillRect(555,355,100,55);
         g.fillRoundRect(this.x,this.y,this.width,this.height,10,10);
         g.setColor(Color.MAGENTA);
         g.drawRoundRect(this.x,this.y,this.width,this.height,10,10);
-        g.drawLine(589,354,655,418);
-        g.drawLine(555,390,617,455);
         g.setColor(Color.BLACK);
+        g.fillRect(555,405,55,55);
         g.fillRoundRect(50,150,105,55,10,10);
         g.fillRoundRect(50,450,105,55,10,10);
         g.fillRoundRect(450,500,105,55,10,10);
@@ -64,5 +64,8 @@ public class Rectangle_Girly {
         g.fillRect(1205,250,48,55);
         g.fillRect(1205,350,48,55);
         g.fillRect(1205,550,48,55);
+        g.setColor(Color.MAGENTA);
+        g.drawLine(589,354,655,418);
+        g.drawLine(555,390,617,455);
     }
 }

@@ -4,7 +4,7 @@ public class GUI_Original {
     private Gamescreen_Original painting;
     public GUI_Original() {
 
-        f = new Frame("PacMan-Original",-1,-1,1279, 763);
+        f = new Frame("PacMan-Original",-1,-1,1279, 745);
         painting = new Gamescreen_Original();
         f.getContentPane().add(painting);
         f.setupFrame();

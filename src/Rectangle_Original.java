@@ -20,6 +20,8 @@ public class Rectangle_Original {
 		g.setColor(Color.BLACK);
 		g.fillRect(1125,260,25,130);
 		g.fillRect(710,250,30,110);
+		g.fillRect(709,260,40,95);
+		g.fillRect(1109,255,40,160);
 
 		g.setColor(Color.BLUE);
 		g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //Map Umrandung

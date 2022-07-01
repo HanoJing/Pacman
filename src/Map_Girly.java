@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Map_Girly {
 
-    public static Rectangle_Girly[] rect = new Rectangle_Girly[51];
+    public static Rectangle_Girly[] rect = new Rectangle_Girly[53];
 
 
     public Map_Girly(){
@@ -26,22 +26,22 @@ public class Map_Girly {
         rect[16] = new Rectangle_Girly(500,6,55,149);
         rect[17] = new Rectangle_Girly(450,100,105,55);
         rect[18] = new Rectangle_Girly(200,200,55,255);
-        rect[19] = new Rectangle_Girly(200, 200, 155, 55);
-        rect[20] = new Rectangle_Girly(200, 400, 155, 55);
-        rect[21] = new Rectangle_Girly(300, 300, 55, 155);
-        rect[22] = new Rectangle_Girly(400, 200, 55, 255);
-        rect[23] = new Rectangle_Girly(500, 200, 155, 155);
-        rect[24] = new Rectangle_Girly(500, 200, 55, 255);
-        rect[25] = new Rectangle_Girly(550, 250, 55, 55);
-        rect[26] = new Rectangle_Girly(615, 415, 40, 40);
-        rect[27] = new Rectangle_Girly(700, 200, 55, 255);
-        rect[28] = new Rectangle_Girly(700, 400, 155, 55);
-        rect[29] = new Rectangle_Girly(850, 300, 155, 55);
-        rect[30] = new Rectangle_Girly(850, 200, 55, 155);
-        rect[31] = new Rectangle_Girly(950, 200, 55, 155);
-        rect[32] = new Rectangle_Girly(500, 6, 55, 149);
-        rect[33] = new Rectangle_Girly(700, 500, 55, 150);
-        rect[34] = new Rectangle_Girly(700, 100, 105, 55);
+        rect[19] = new Rectangle_Girly(200,200,155,55);
+        rect[20] = new Rectangle_Girly(200,400,155,55);
+        rect[21] = new Rectangle_Girly(300,300,55,155);
+        rect[22] = new Rectangle_Girly(400,200,55,255);
+        rect[23] = new Rectangle_Girly(500,200,155,155);
+        rect[24] = new Rectangle_Girly(500,200,55,255);
+        rect[25] = new Rectangle_Girly(550,250,55,55);
+        rect[26] = new Rectangle_Girly(615,415,40,40);
+        rect[27] = new Rectangle_Girly(700,200,55,255);
+        rect[28] = new Rectangle_Girly(700,400,155,55);
+        rect[29] = new Rectangle_Girly(850,300,155,55);
+        rect[30] = new Rectangle_Girly(850,200,55,155);
+        rect[31] = new Rectangle_Girly(950,200,55,155);
+        rect[32] = new Rectangle_Girly(500,6,55,149);
+        rect[33] = new Rectangle_Girly(700,500,55,150);
+        rect[34] = new Rectangle_Girly(700,100,105,55);
         rect[35] = new Rectangle_Girly(700, 500, 105, 55);
         rect[36] = new Rectangle_Girly(1100, 150, 105, 55);
         rect[37] = new Rectangle_Girly(1100, 150, 55, 155);
@@ -58,6 +58,8 @@ public class Map_Girly {
         rect[48] = new Rectangle_Girly(950, 50, 55, 105);
         rect[49] = new Rectangle_Girly(250, 500, 55, 105);
         rect[50] = new Rectangle_Girly(950, 500, 55, 105);
+        rect[51] = new Rectangle_Girly(560,360,90,45);
+        rect[52] = new Rectangle_Girly(560,410,45,45);
     }
 
     public void drawMap_Girly(Graphics g){
