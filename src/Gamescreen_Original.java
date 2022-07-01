@@ -1,5 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import Geisterchen.Blinky;
+import Geisterchen.Clyde;
+import Geisterchen.Inky;
+import Geisterchen.Pinky;
+import Geisterchen.Sady;
+
 public class Gamescreen_Original extends JPanel {
 	private static Spielfigur_Original pacMan;
 	private Map_Original map;

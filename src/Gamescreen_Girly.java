@@ -1,6 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 import Geisterchen.Blinky;
+import Geisterchen.Clyde;
+import Geisterchen.Inky;
+import Geisterchen.Pinky;
+import Geisterchen.Sady;
+
 public class Gamescreen_Girly extends JPanel {
     private Map_Girly map;
     private static Spielfigur_Girly pacMan;
@@ -23,7 +28,7 @@ public class Gamescreen_Girly extends JPanel {
         i = new Icons();
         j = new Icons();
 
-        blinky = new Blinky(15,315);
+        blinky = new Blinky(15,315,false,true,false,false);
 
         pacMan = new Spielfigur_Girly(265,365,30,30,380,360,Color.YELLOW);
     }
