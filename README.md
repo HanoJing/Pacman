@@ -32,7 +32,7 @@
 
 • Zwischenlobby: Gestaltung (Menü/Exit/Restart) & Auswahl mittels Maus
 
-• Map 2: fertig gestalten (Hindernisse)
+• Map 2: fertig gestalten (Hindernisse) √
 
 • Map 2: zweites Icon erstellen
 
