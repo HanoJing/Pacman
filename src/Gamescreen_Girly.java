@@ -30,7 +30,7 @@ public class Gamescreen_Girly extends JPanel {
 
         blinky = new Blinky(15,315,false,true,false,false);
 
-        pacMan = new Spielfigur_Girly(265,365,30,30,380,360,Color.YELLOW);
+        pacMan = new Spielfigur_Girly(265,365,30,30,380, 360, Color.YELLOW);
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
