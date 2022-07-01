@@ -4,21 +4,21 @@ import java.awt.*;
 
 public class Pinky {
 
-    public static int startX;
-    public static int startY;
-    public static int links;
-    public static int rechts;
-    public static int oben;
-    public static int unten;
+        public static int startX;
+        public static int startY;
+        public static int links;
+        public static int rechts;
+        public static int oben;
+        public static int unten;
 
-    public Pinky(int startX,int startY,int links,int rechts,int oben,int unten){
-        this.startX = startX;
-        this.startY = startY;
-        this.links = links;
-        this.rechts = rechts;
-        this.oben = oben;
-        this.unten = unten;
-    }
+        public Pinky(int startX,int startY,int links,int rechts,int oben,int unten){
+            this.startX = startX;
+            this.startY = startY;
+            this.links = links;
+            this.rechts = rechts;
+            this.oben = oben;
+            this.unten = unten;
+        }
 
     public void drawPinky(Graphics g){
         g.setColor(Color.pink);

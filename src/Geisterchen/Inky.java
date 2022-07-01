@@ -4,13 +4,13 @@ import java.awt.*;
 
 public class Inky {
 
-    public static int startX;
-    public static int startY;
+        public static int startX;
+        public static int startY;
 
-    public Inky(int startX,int startY){
-        this.startX = startX;
-        this.startY = startY;
-    }
+        public Inky(int startX,int startY){
+            this.startX = startX;
+            this.startY = startY;
+        }
 
     public void drawInky(Graphics g){
         g.setColor(Color.cyan);

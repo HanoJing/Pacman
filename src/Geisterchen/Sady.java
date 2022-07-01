@@ -4,13 +4,13 @@ import java.awt.*;
 
 public class Sady {
 
-    public static int startX;
-    public static int startY;
+        public static int startX;
+        public static int startY;
 
-    public Sady(int startX,int startY){
-        this.startX = startX;
-        this.startY = startY;
-    }
+        public Sady(int startX,int startY){
+            this.startX = startX;
+            this.startY = startY;
+        }
     public void drawSady(Graphics g){
         g.setColor(Color.blue);
         g.fillRect(startX+10,startY,8,2);
