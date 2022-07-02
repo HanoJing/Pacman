@@ -18,7 +18,7 @@ public class Spielfigur_Original {
 		this.width = width;
 		this.heigth = heigth;
 		this.startAngle = startAngle;
-		this.arcAngle = 300;
+		this.arcAngle = 360;
 		this.farbe = farbe;
 
 	}
@@ -50,6 +50,7 @@ public class Spielfigur_Original {
 					moveFigur = true;
 					this.startAngle = 480;
 					this.startY -= 50;
+					arcAngle = 300;
 				for (Rectangle_Original r : Map_Original.rect) {
 					if(!Util.checkKollision(r, Gamescreen_Original.getPacMan())){
 					   f.repaint();
@@ -63,6 +64,7 @@ public class Spielfigur_Original {
 				moveFigur = true;
 				this.startAngle = 300;
 				this.startY += 50;
+				arcAngle = 300;
 				for (Rectangle_Original r : Map_Original.rect) {
 					if (!Util.checkKollision(r, Gamescreen_Original.getPacMan())) {
 						f.repaint();
@@ -76,6 +78,7 @@ public class Spielfigur_Original {
 				moveFigur = true;
 				this.startAngle = 210;
 				this.startX -= 50;
+				arcAngle = 300;
 				for (Rectangle_Original r : Map_Original.rect) {
 					if (!Util.checkKollision(r, Gamescreen_Original.getPacMan())) {
 						f.repaint();
@@ -89,6 +92,7 @@ public class Spielfigur_Original {
 				moveFigur = true;
 				this.startAngle = 380;
 				this.startX += 50;
+				arcAngle = 300;
 				for (Rectangle_Original r : Map_Original.rect) {
 					if (!Util.checkKollision(r, Gamescreen_Original.getPacMan())) {
 						f.repaint();

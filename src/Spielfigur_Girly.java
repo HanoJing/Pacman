@@ -23,7 +23,7 @@ public class Spielfigur_Girly {
         this.width = width;
         this.heigth = heigth;
         this.startAngle = startAngle;
-        this.arcAngle = 300;
+        this.arcAngle = 360;
         this.farbe = farbe;
 
     }
@@ -171,12 +171,14 @@ public class Spielfigur_Girly {
 
         public void moveSpielfigur_Girly() {
 
+            links = true; rechts = false; oben = false;
 
             while (true) {
                 if (Keyboard.upPressed && startY >= 30) {
                     moveFigur_Girly = true;
                     this.startAngle = 480;
                     this.startY -= 50;
+                    arcAngle = 300;
                     oben = true; links = false; rechts = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
@@ -191,6 +193,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 300;
                     this.startY += 50;
+                    arcAngle = 300;
                     links = true; rechts = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
@@ -205,6 +208,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 210;
                     this.startX -= 50;
+                    arcAngle = 300;
                     links = true; rechts = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
@@ -219,6 +223,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 380;
                     this.startX += 50;
+                    arcAngle = 300;
                     rechts = true; links = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {

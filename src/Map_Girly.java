@@ -33,7 +33,7 @@ public class Map_Girly {
         rect[23] = new Rectangle_Girly(500,200,155,155);
         rect[24] = new Rectangle_Girly(500,200,55,255);
         rect[25] = new Rectangle_Girly(550,250,55,55);
-        rect[26] = new Rectangle_Girly(615,415,40,40);
+        rect[26] = new Rectangle_Girly(613,413,42,42);    //...
         rect[27] = new Rectangle_Girly(700,200,55,255);
         rect[28] = new Rectangle_Girly(700,400,155,55);
         rect[29] = new Rectangle_Girly(850,300,155,55);
