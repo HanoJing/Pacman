@@ -147,23 +147,24 @@ public class Spielfigur_Girly {
         } else if (oben == true) {
             // nach unten laufen
             g.setColor(Color.pink);
-            g.fillRect(startX + 6, startY + 26, 4, 4);  // Schleife
-            g.fillRect(startX + 8, startY + 24, 4, 4);
-            g.fillRect(startX + 2, startY + 18, 4, 4);
+            g.fillRect(startX + 4, startY + 28, 4, 4);  // Schleife
+            g.fillRect(startX + 6, startY + 26, 4, 4);
             g.fillRect(startX, startY + 20, 4, 4);
-            g.fillRect(startX + 6, startY + 22, 2, 2);
+            g.fillRect(startX -2, startY + 22, 4, 4);
             g.fillRect(startX + 4, startY + 24, 2, 2);
+            g.fillRect(startX + 2, startY + 26, 2, 2);
 
             g.setColor(Color.magenta);
-            g.fillRect(startX + 4, startY + 22, 2, 2);  // Schleife
-            g.fillRect(startX + 6, startY + 24, 2, 2);
+            g.fillRect(startX + 2, startY + 24, 2, 2);  // Schleife
+            g.fillRect(startX + 4, startY + 26, 2, 2);
 
             g.setColor(Color.BLACK);
-            g.fillRect(startX - 2, startY + 18, 2, 6);  // Schleife
-            g.fillRect(startX + 4, startY + 26, 2, 4);
-            g.fillRect(startX, startY + 24, 4, 2);
-            g.fillRect(startX + 6, startY + 30, 4, 2);
-            g.fillRect(startX, startY + 18, 2, 2);
+            g.fillRect(startX, startY + 18, 4, 2);  // Schleife
+            g.fillRect(startX + 4, startY + 20, 2, 4);
+            g.fillRect(startX + 6, startY + 24, 4, 2);
+            g.fillRect(startX + 10, startY + 26, 2, 4);
+            g.fillRect(startX - 2, startY + 20, 2, 2);
+            g.fillRect(startX + 8, startY + 30,2,4);
 
         }
     }
@@ -176,7 +177,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 480;
                     this.startY -= 50;
-                    links = true;
+                    oben = true; links = false; rechts = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
                             f.repaint();
@@ -190,7 +191,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 300;
                     this.startY += 50;
-                    oben = true;
+                    links = true; rechts = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
                             f.repaint();
@@ -204,7 +205,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 210;
                     this.startX -= 50;
-                    links = true;
+                    links = true; rechts = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
                             f.repaint();
@@ -218,7 +219,7 @@ public class Spielfigur_Girly {
                     moveFigur_Girly = true;
                     this.startAngle = 380;
                     this.startX += 50;
-                    rechts = true;
+                    rechts = true; links = false; oben = false;
                     for (Rectangle_Girly r : Map_Girly.rect) {
                         if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
                             f.repaint();
