@@ -2,7 +2,7 @@
 
 -----!Wichtige Aufgaben!:-----
 
-• Allgemein: Größe unabhängig von Frame (dynamische Werte) (MELISSA)
+• Allgemein: Größe unabhängig von Frame (dynamische Werte) !ZURÜCKGESTELLT!
 
 • Map's: Punkte verschwinden beim Essen
 
