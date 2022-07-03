@@ -1,18 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import Geisterchen.Blinky;
-import Geisterchen.Clyde;
-import Geisterchen.Inky;
-import Geisterchen.Pinky;
-import Geisterchen.Sady;
 
 public class Gamescreen_Original extends JPanel {
-	private static Spielfigur_Original pacMan;
+	private static GamePiece_Original pacMan;
 	private Map_Original map;
-	private Dots d;
-	private Icons i;
-	private Icons j;
-	private Icons k;
+	private Dots dots;
+	private Icons cherry;
+	private Icons strawberry;
+	private Icons scoreLettering;
 
 	public int score = 0;
 	public boolean hit = false;
@@ -22,12 +17,12 @@ public class Gamescreen_Original extends JPanel {
 
 
 		map = new Map_Original();
-		d = new Dots();
-    	i = new Icons();
-		j = new Icons();
-		k = new Icons();
+		dots = new Dots();
+    	cherry = new Icons();
+		strawberry = new Icons();
+		scoreLettering = new Icons();
 
-    	pacMan = new Spielfigur_Original(613,313,30,30,380,360,Color.YELLOW);
+    	pacMan = new GamePiece_Original(613,313,30,30,380,360,Color.YELLOW);
 	}
     	
     public void paintComponent(Graphics g) {
@@ -36,24 +31,24 @@ public class Gamescreen_Original extends JPanel {
     	setBackground(Color.BLACK);
 
 
-		d.drawDots(g);
+		dots.drawDots(g);
 		map.drawMap_Original(g);
 
 			g.setColor(Color.WHITE);
 			g.drawString(" " + score, 670, 690);
 
-			pacMan.drawSpielfigur(g);
-			pacMan.showSpielfigur(g);
+			pacMan.drawGamePiece(g);
+			pacMan.showGamePiece(g);
 
-			i.drawCherry(g);
-			j.drawStrawberry(g);
-			k.drawScore(g);
+			cherry.drawCherry(g);
+			strawberry.drawStrawberry(g);
+			scoreLettering.drawScoreLettering(g);
 		}
 
     
 
    
-    public static Spielfigur_Original getPacMan() {
+    public static GamePiece_Original getPacMan() {
 		return pacMan;
 	}
 
@@ -61,9 +56,9 @@ public class Gamescreen_Original extends JPanel {
 
     public void score() {
       	    
-    	for(int j = 1; j < d.yW.length-1; j++) {
-    		for(int i = 1; i < d.xW.length-1; i++) {    	
-    			if(pacMan.startY < d.yW[j] && pacMan.startY < d.yW[j+1] && pacMan.startY > d.yW[j-1] && pacMan.startX < d.xW[i] && pacMan.startX < d.xW[i+1] && pacMan.startX > d.xW[i-1]) {
+    	for(int j = 1; j < dots.yW.length-1; j++) {
+    		for(int i = 1; i < dots.xW.length-1; i++) {
+    			if(pacMan.startY < dots.yW[j] && pacMan.startY < dots.yW[j+1] && pacMan.startY > dots.yW[j-1] && pacMan.startX < dots.xW[i] && pacMan.startX < dots.xW[i+1] && pacMan.startX > dots.xW[i-1]) {
     				score+=10;
       				hit = true;
 

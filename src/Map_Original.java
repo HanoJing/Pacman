@@ -14,7 +14,7 @@ public class Map_Original {
         rect[5] = new Rectangle_Original(50,500,155,105);
         rect[6] = new Rectangle_Original(250,500,305,105);
         rect[7] = new Rectangle_Original(600,500,55,150);
-        rect[8] = new Rectangle_Original(710,260,30,90);  //unsichtbares Hindernisse
+        rect[8] = new Rectangle_Original(710,260,30,90);
         rect[9] = new Rectangle_Original(1110,260,30,150);
         rect[10] = new Rectangle_Original(700,500,305,105);
         rect[11] = new Rectangle_Original(1050,500,155,105);

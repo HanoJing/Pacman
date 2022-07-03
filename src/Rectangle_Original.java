@@ -24,8 +24,8 @@ public class Rectangle_Original {
 		g.fillRect(1109,255,40,160);
 
 		g.setColor(Color.BLUE);
-		g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //Map Umrandung
-		g.drawRoundRect(10, 10, 1237, 637, 10, 10); //Map Umrandung
+		g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //map border
+		g.drawRoundRect(10, 10, 1237, 637, 10, 10); //map border
 		g.drawRoundRect(x,y,width,height, 10, 10);
 		g.drawLine(705,250,727,275);   //M
 		g.drawLine(727,275,750,250);

@@ -68,7 +68,7 @@ public class Icons {
         g.fillRect(1236,690,2,2);
 
     }
-    public void drawDiamant(Graphics g){
+    public void drawDiamond(Graphics g){
 
         g.setColor(Color.pink);
         g.fillRect(1222,672,22,2);
@@ -134,7 +134,7 @@ public class Icons {
 
     }
 
-    public void drawScore(Graphics g){
+    public void drawScoreLettering(Graphics g){
 
         g.setColor(Color.white);
         g.fillRect(582,678,8,2);   //S

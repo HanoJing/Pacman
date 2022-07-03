@@ -4,7 +4,6 @@ public class Map_Girly {
 
     public static Rectangle_Girly[] rect = new Rectangle_Girly[53];
 
-
     public Map_Girly(){
 
         rect[0] = new Rectangle_Girly(6,50,105,55);

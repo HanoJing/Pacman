@@ -1,16 +1,17 @@
-package Geisterchen;
+package Enemies;
 
 import java.awt.*;
 
-public class Blinky {
-    public static int startX;
-    public static int startY;
-    public static boolean links;
-    public static boolean rechts;
-    public static boolean oben;
-    public static boolean unten;
+public class Inky {
 
-    public Blinky(int startX,int startY,boolean links,boolean rechts,boolean oben,boolean unten){
+        public static int startX;
+        public static int startY;
+        public static boolean links;
+        public static boolean rechts;
+        public static boolean oben;
+        public static boolean unten;
+
+    public Inky(int startX,int startY,boolean links,boolean rechts,boolean oben,boolean unten){
         this.startX = startX;
         this.startY = startY;
         this.links = links;
@@ -20,8 +21,8 @@ public class Blinky {
     }
 
 
-    public void drawBlinky(Graphics g){
-        g.setColor(Color.red);
+    public void drawInky(Graphics g){
+        g.setColor(Color.cyan);
         g.fillRect(startX+10,startY,8,2);
         g.fillRect(startX+6,startY+2,16,2);
         g.fillRect(startX+4,startY+4,20,20);
@@ -64,7 +65,7 @@ public class Blinky {
             g.setColor(Color.blue);
             g.fillRect(startX + 6, startY + 6, 4, 4);
             g.fillRect(startX + 18, startY + 6, 4, 4);
-        }else if (unten == true) {
+        }else if(unten == true) {
             //Augen sind nach oben gerichtet
             g.setColor(Color.white);
             g.fillRect(startX + 6, startY + 6, 4, 10);

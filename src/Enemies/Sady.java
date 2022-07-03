@@ -1,4 +1,4 @@
-package Geisterchen;
+package Enemies;
 
 import java.awt.*;
 

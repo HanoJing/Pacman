@@ -1,8 +1,8 @@
-package Geisterchen;
+package Enemies;
 
 import java.awt.*;
 
-public class Inky {
+public class Pinky {
 
         public static int startX;
         public static int startY;
@@ -11,18 +11,17 @@ public class Inky {
         public static boolean oben;
         public static boolean unten;
 
-    public Inky(int startX,int startY,boolean links,boolean rechts,boolean oben,boolean unten){
-        this.startX = startX;
-        this.startY = startY;
-        this.links = links;
-        this.rechts = rechts;
-        this.oben = oben;
-        this.unten = unten;
-    }
+        public Pinky(int startX,int startY,boolean links,boolean rechts,boolean oben,boolean unten){
+            this.startX = startX;
+            this.startY = startY;
+            this.links = links;
+            this.rechts = rechts;
+            this.oben = oben;
+            this.unten = unten;
+        }
 
-
-    public void drawInky(Graphics g){
-        g.setColor(Color.cyan);
+    public void drawPinky(Graphics g){
+        g.setColor(Color.pink);
         g.fillRect(startX+10,startY,8,2);
         g.fillRect(startX+6,startY+2,16,2);
         g.fillRect(startX+4,startY+4,20,20);

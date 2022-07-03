@@ -4,12 +4,12 @@ public class GUI_Original {
     private Gamescreen_Original painting;
     public GUI_Original() {
 
-        f = new Frame("PacMan-Original",-1,-1,1279, 745);
+        f = new Frame("PacMan - Original",-1,-1,1279, 745);
         painting = new Gamescreen_Original();
         f.getContentPane().add(painting);
         f.setupFrame();
 
-        Thread t2 = new Thread(() -> painting.getPacMan().moveSpielfigur());
+        Thread t2 = new Thread(() -> painting.getPacMan().moveGamePiece());
         t2.start();
 
     }

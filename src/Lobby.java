@@ -1,27 +1,32 @@
 import java.awt.*;
 import javax.swing.*;
-import Geisterchen.Blinky;
-import Geisterchen.Clyde;
-import Geisterchen.Inky;
-import Geisterchen.Pinky;
+import Enemies.Blinky;
+import Enemies.Clyde;
+import Enemies.Inky;
+import Enemies.Pinky;
 
 public class Lobby extends JPanel {
+
+    private Map_Lobby map;
 
     private Blinky b;
     private Clyde c;
     private Inky i;
     private Pinky p;
-    private Spielfigur_Original pacman;
+    private GamePiece_Original pacman;
 
     public Lobby() {
 
         addKeyListener(Keyboard.getInstance());
 
+        map = new Map_Lobby(370,60);
+
         b = new Blinky(1020, 625, true, false, false, false);
         c = new Clyde(1060, 625, true, false, false, false);
         i = new Inky(1100, 625, true, false, false, false);
         p = new Pinky(1140, 625, true, false, false, false);
-        pacman = new Spielfigur_Original(950, 625, 30, 30, 210, 380, Color.YELLOW);
+        pacman = new GamePiece_Original(950, 625, 30, 30, 210, 300, Color.YELLOW);
+
 
     }
 
@@ -30,13 +35,11 @@ public class Lobby extends JPanel {
 
         setBackground(Color.BLACK);
 
-        g.setColor(Color.YELLOW);
-        g.drawRoundRect(575, 325, 150, 40, 10, 10);
-        g.drawString("PAC-MAN", 620, 350);
+        map.drawHeadline(g);
 
         g.setColor(Color.white);
-        g.drawString("Drücke 1 um die Originale Pac-Man Welt zu öffnen!", 500, 400);
-        g.drawString("Drücke 2 um die Girly-Edition Pac-Man Welt zu öffnen!", 490, 425);
+        g.drawString("Press 1, to open the original Pac-Man Map!", 510, 400);
+        g.drawString("Press 2, to open the Ms. Pac-Man Map!", 517, 425);
 
         g.fillOval(930, 637, 5, 5);
         g.fillOval(900, 637, 5, 5);
@@ -47,7 +50,8 @@ public class Lobby extends JPanel {
         c.drawClyde(g);
         i.drawInky(g);
 
-        pacman.showSpielfigur(g);
+        pacman.showGamePiece(g);
+
     }
     public static void chooseMap() {
         while(true) {
@@ -64,7 +68,7 @@ public class Lobby extends JPanel {
                 break;
             }
             if (Keyboard.threePressed) {
-                System.out.println("Diese Map existiert noch nicht!");
+                System.out.println("This Map still not exist!");
                 break;
             }
             try {

@@ -1,7 +1,7 @@
 public class Util {
 
 
-    public static boolean checkKollision(Rectangle_Original rect, Spielfigur_Original pacMan) {
+    public static boolean checkKollision(Rectangle_Original rect, GamePiece_Original pacMan) {
 
         if(rect.x<=pacMan.startX && (rect.x+rect.width)>pacMan.startX && rect.y<=pacMan.startY && (rect.y+rect.height)>=pacMan.startY+pacMan.heigth) {
             return true;
@@ -10,7 +10,7 @@ public class Util {
         }
 
     }
-    public static boolean checkKollision_Girly(Rectangle_Girly rect, Spielfigur_Girly pacMan){
+    public static boolean checkKollision_Girly(Rectangle_Girly rect, GamePiece_Girly pacMan){
 
         if(rect.x<=pacMan.startX && (rect.x+rect.width)>pacMan.startX && rect.y<=pacMan.startY && (rect.y+rect.height)>=pacMan.startY+pacMan.heigth) {
             return true;

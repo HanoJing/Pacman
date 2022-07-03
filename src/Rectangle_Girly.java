@@ -8,10 +8,10 @@ public class Rectangle_Girly {
     public int height;
 
     public Rectangle_Girly(int x,int y,int width,int height){
-        this.x=x;
-        this.y=y;
-        this.width=width;
-        this.height=height;
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
     }
     public void drawRectangle_Girly(Graphics g){
         g.setColor(Color.BLACK);
@@ -20,6 +20,8 @@ public class Rectangle_Girly {
         g.fillRect(555,355,100,55);
         g.fillRoundRect(this.x,this.y,this.width,this.height,10,10);
         g.setColor(Color.MAGENTA);
+        g.drawRoundRect(2, 2, 1253, 653, 10, 10);   //map border
+        g.drawRoundRect(10, 10, 1237, 637, 10, 10); //map border
         g.drawRoundRect(this.x,this.y,this.width,this.height,10,10);
         g.setColor(Color.BLACK);
         g.fillRect(555,405,55,55);
