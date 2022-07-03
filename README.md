@@ -10,7 +10,7 @@
 
 • Map's: Gegner erstellen √
 
-• KeyListener (EDEN)
+• KeyListener (EDEN) √
 
 
 
@@ -32,11 +32,11 @@
 
 • Zwischenlobby: Gestaltung (Menü/Exit/Restart) & Auswahl mittels Maus
 
-• Map 2: fertig gestalten (Hindernisse)
+• Map 2: fertig gestalten (Hindernisse) √
 
-• Map 2: zweites Icon erstellen
+• Map 2: zweites Icon erstellen √
 
-• Map 2: Schleife an laufende Ms PacMan hängen
+• Map 2: Schleife an laufende Ms PacMan hängen √
 
 • Map's: Ready! Schriftzug erstellen (auslösen durch Space/Enter)
 
