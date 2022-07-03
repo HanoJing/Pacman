@@ -72,8 +72,7 @@ public class Icons {
     }
     public void drawDiamant(Graphics g){
 
-        Color hotPink = new Color(255,105,180);
-        g.setColor(hotPink);
+        g.setColor(Color.pink);
         g.fillRect(1222,672,22,2);
         g.fillRect(1220,674,2,2);
         g.fillRect(1218,676,2,6);
@@ -105,9 +104,35 @@ public class Icons {
 
     public void drawHeart(Graphics g){
 
+        g.setColor(Color.pink);
+        g.fillRect(1180,672,6,2);
+        g.fillRect(1192,672,6,2);
+        g.fillRect(1178,674,2,2);
+        g.fillRect(1186,674,2,2);
+        g.fillRect(1190,674,2,2);
+        g.fillRect(1198,674,2,2);
+        g.fillRect(1176,676,2,8);
+        g.fillRect(1200,676,2,8);
+        g.fillRect(1188,676,2,2);
+        g.fillRect(1178,684,2,2);
+        g.fillRect(1198,684,2,2);
+        g.fillRect(1180,686,2,2);
+        g.fillRect(1196,686,2,2);
+        g.fillRect(1182,688,2,2);
+        g.fillRect(1194,688,2,2);
+        g.fillRect(1184,690,2,2);
+        g.fillRect(1192,690,2,2);
+        g.fillRect(1186,692,2,2);
+        g.fillRect(1190,692,2,2);
+        g.fillRect(1188,694,2,2);
+
     }
 
     public void drawREADY(Graphics g){
+
+    }
+
+    public void drawGameOver(Graphics g){
 
     }
 

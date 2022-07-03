@@ -2,7 +2,7 @@ package Screen;
 
 import javax.swing.*;
 import java.awt.*;
-import Ghosts.Blinky;
+import Ghosts.*;
 import Map.Dots;
 import Map.Map_Girly;
 import Player.Player_Girly;
@@ -14,11 +14,14 @@ public class Gamescreen_Girly extends JPanel {
     private Dots d;
     private Icons i;
     private Icons j;
+    private Icons k;
     private Blinky blinky;
+    private Pinky pinky;
     public int score = 0;
 
     public int x;
     public int y;
+
 
     public Gamescreen_Girly(Frame f) {
 
@@ -27,10 +30,12 @@ public class Gamescreen_Girly extends JPanel {
         d = new Dots();
         i = new Icons();
         j = new Icons();
+        k = new Icons();
 
         blinky = new Blinky(15,315,false,true,false,false);
+        pinky = new Pinky(1215,315,true,false,false,false);
 
-        pacMan = new Player_Girly(265,365,30,30,380,360,Color.YELLOW);
+        pacMan = new Player_Girly(663,313,30,30,380, 360, Color.YELLOW);
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -48,11 +53,13 @@ public class Gamescreen_Girly extends JPanel {
         pacMan.drawSpielfigur_Girly(g);
 
         blinky.drawBlinky(g);
+        pinky.drawPinky(g);
 
         pacMan.showSpielfigur_Girly(g);
 
         i.drawDiamant(g);
         j.drawScore(g);
+        k.drawHeart(g);
 
         g.setColor(Color.WHITE);
         g.drawString(" "+score,670,690);

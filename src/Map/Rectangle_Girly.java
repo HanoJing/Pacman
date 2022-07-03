@@ -30,17 +30,6 @@ public class Rectangle_Girly {
         g.fillRoundRect(450,500,105,55,10,10);
         g.fillRoundRect(500,500,55,153,10,10);
         g.fillRoundRect(500,4,55,149,10,10);
-        g.fillRoundRect(200,200,55,255,10,10);
-        g.fillRoundRect(200,400,155,55,10,10);
-        g.fillRoundRect(850,300,155,55,10,10);
-        g.fillRoundRect(150, 50, 255, 55,10,10);
-        g.fillRoundRect(850,50,255,55,10,10);
-        g.fillRoundRect(150, 550, 255, 55,10,10);
-        g.fillRoundRect(850,550,255,55,10,10);
-        g.fillRoundRect(450, 100, 105, 55,10,10);
-        g.fillRoundRect(700, 100, 105, 55,10,10);
-        g.fillRoundRect(700,200,55,255,10,10);
-        g.fillRoundRect(500,305,90,85,10,10);
         g.fillRoundRect(500,200,150,50,10,10);
         g.fillRoundRect(200,200,55,255,10,10);
         g.fillRoundRect(200,400,155,55,10,10);
@@ -52,7 +41,7 @@ public class Rectangle_Girly {
         g.fillRoundRect(450, 100, 105, 55,10,10);
         g.fillRoundRect(700, 100, 105, 55,10,10);
         g.fillRoundRect(700,200,55,255,10,10);
-        g.fillRoundRect(500,305,90,85,10,10);
+        g.fillRoundRect(500,305,94,85,10,10);
         g.fillRoundRect(500,200,150,50,10,10);
         g.fillRoundRect(700,4,49,149,10,10);
         g.fillRoundRect(700,500,55,152,10,10);
@@ -67,7 +56,7 @@ public class Rectangle_Girly {
         g.fillRect(1205,350,48,55);
         g.fillRect(1205,550,48,55);
         g.setColor(Color.MAGENTA);
-        g.drawLine(589,354,655,418);
-        g.drawLine(555,390,617,455);
+        g.drawLine(594,355,655,416);
+        g.drawLine(555,390,616,455);
     }
 }

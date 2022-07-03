@@ -19,6 +19,9 @@ public class Player_Girly {
     public int arcAngle;
     public Color farbe;
     public boolean moveFigur_Girly = false;
+    public boolean rechts;
+    public boolean links;
+    public boolean oben;
 
 
     public Player_Girly(int startX, int startY, int width, int heigth, int startAngle, int arcAngle, Color farbe) {
@@ -28,7 +31,7 @@ public class Player_Girly {
         this.width = width;
         this.heigth = heigth;
         this.startAngle = startAngle;
-        this.arcAngle = 300;
+        this.arcAngle = 360;
         this.farbe = farbe;
 
     }
@@ -105,71 +108,150 @@ public class Player_Girly {
         g.setColor(farbe);
         g.fillArc(startX, startY, width, heigth, startAngle, arcAngle);
 
+        if (rechts == true) {
+            // nach rechts laufen
+            g.setColor(Color.pink);
+            g.fillRect(startX, startY + 8, 4, 4);  // Schleife
+            g.fillRect(startX - 2, startY + 6, 4, 4);
+            g.fillRect(startX + 4, startY, 4, 4);
+            g.fillRect(startX + 6, startY + 2, 4, 4);
+            g.fillRect(startX + 2, startY + 4, 2, 2);
+            g.fillRect(startX + 4, startY + 6, 2, 2);
+
+            g.setColor(Color.magenta);
+            g.fillRect(startX + 4, startY + 4, 2, 2);  // Schleife
+            g.fillRect(startX + 2, startY + 6, 2, 2);
+
+            g.setColor(Color.BLACK);
+            g.fillRect(startX + 6, startY + 6, 2, 2);  // Schleife
+            g.fillRect(startX + 4, startY + 8, 2, 4);
+            g.fillRect(startX - 2, startY + 10, 2, 4);
+            g.fillRect(startX + 10, startY + 2, 2, 4);
+            g.fillRect(startX, startY + 12, 4, 2);
+            g.fillRect(startX + 6, startY + 6, 4, 2);
+            g.fillRect(startX + 8, startY, 4, 2);
+
+        } else if (links == true) {
+            // nach links laufen
+            g.setColor(Color.pink);
+            g.fillRect(startX + 26, startY + 6, 4, 4);  // Schleife
+            g.fillRect(startX + 28, startY + 4, 4, 4);
+            g.fillRect(startX + 22, startY - 2, 4, 4);
+            g.fillRect(startX + 20, startY, 4, 4);
+            g.fillRect(startX + 26, startY + 2, 2, 2);
+            g.fillRect(startX + 24, startY + 4, 2, 2);
+
+            g.setColor(Color.magenta);
+            g.fillRect(startX + 24, startY + 2, 2, 2);  // Schleife
+            g.fillRect(startX + 26, startY + 4, 2, 2);
+
+            g.setColor(Color.BLACK);
+            g.fillRect(startX + 18, startY - 2, 2, 6);  // Schleife
+            g.fillRect(startX + 24, startY + 6, 2, 4);
+            g.fillRect(startX + 20, startY + 4, 4, 2);
+            g.fillRect(startX + 26, startY + 10, 4, 2);
+            g.fillRect(startX + 20, startY - 2, 2, 2);
+
+        } else if (oben == true) {
+            // nach unten laufen
+            g.setColor(Color.pink);
+            g.fillRect(startX + 4, startY + 28, 4, 4);  // Schleife
+            g.fillRect(startX + 6, startY + 26, 4, 4);
+            g.fillRect(startX, startY + 20, 4, 4);
+            g.fillRect(startX -2, startY + 22, 4, 4);
+            g.fillRect(startX + 4, startY + 24, 2, 2);
+            g.fillRect(startX + 2, startY + 26, 2, 2);
+
+            g.setColor(Color.magenta);
+            g.fillRect(startX + 2, startY + 24, 2, 2);  // Schleife
+            g.fillRect(startX + 4, startY + 26, 2, 2);
+
+            g.setColor(Color.BLACK);
+            g.fillRect(startX, startY + 18, 4, 2);  // Schleife
+            g.fillRect(startX + 4, startY + 20, 2, 4);
+            g.fillRect(startX + 6, startY + 24, 4, 2);
+            g.fillRect(startX + 10, startY + 26, 2, 4);
+            g.fillRect(startX - 2, startY + 20, 2, 2);
+            g.fillRect(startX + 8, startY + 30,2,4);
+
+        }
     }
 
-    public void moveSpielfigur_Girly() {
+        public void moveSpielfigur_Girly() {
 
-        while (true){
-            if (Keyboard.upPressed && startY >= 30) {
-                moveFigur_Girly = true;
-                this.startAngle = 480;
-                this.startY -= 50;
-                for (Rectangle_Girly r : Map_Girly.rect) {
-                    if(!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())){
-                        f.repaint();
-                    }else{
-                        this.startY += 50;
-                        f.repaint();
-                    }
-                }
-                Util.sleep();
-            } else if (Keyboard.downPressed && startY <= 580) {
-                moveFigur_Girly = true;
-                this.startAngle = 300;
-                this.startY += 50;
-                for (Rectangle_Girly r : Map_Girly.rect) {
-                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
-                        f.repaint();
-                    } else {
-                        this.startY -= 50;
-                        f.repaint();
-                    }
-                }
-                Util.sleep();
-            } else if (Keyboard.leftPressed && startX >= 30) {
-                moveFigur_Girly = true;
-                this.startAngle = 210;
-                this.startX -= 50;
-                for (Rectangle_Girly r : Map_Girly.rect) {
-                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
-                        f.repaint();
-                    } else {
-                        this.startX += 50;
-                        f.repaint();
-                    }
-                }
-                Util.sleep();
-            } else if (Keyboard.rightPressed && startX <= 1200) {
-                moveFigur_Girly = true;
-                this.startAngle = 380;
-                this.startX += 50;
-                for (Rectangle_Girly r : Map_Girly.rect) {
-                    if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
-                        f.repaint();
-                    } else {
-                        this.startX -= 50;
-                        f.repaint();
-                    }
-                }
-                Util.sleep();
-            }
+            links = true; rechts = false; oben = false;
 
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            while (true) {
+                if (Keyboard.upPressed && startY >= 30) {
+                    moveFigur_Girly = true;
+                    this.startAngle = 480;
+                    this.startY -= 50;
+                    arcAngle = 300;
+                    oben = true; links = false; rechts = false;
+                    for (Rectangle_Girly r : Map_Girly.rect) {
+                        if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                            f.repaint();
+                        } else {
+                            this.startY += 50;
+                            f.repaint();
+                        }
+                    }
+                    Util.sleep();
+                } else if (Keyboard.downPressed && startY <= 580) {
+                    moveFigur_Girly = true;
+                    this.startAngle = 300;
+                    this.startY += 50;
+                    arcAngle = 300;
+                    links = true; rechts = false; oben = false;
+                    for (Rectangle_Girly r : Map_Girly.rect) {
+                        if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                            f.repaint();
+                        } else {
+                            this.startY -= 50;
+                            f.repaint();
+                        }
+                    }
+                    Util.sleep();
+                } else if (Keyboard.leftPressed && startX >= 30) {
+                    moveFigur_Girly = true;
+                    this.startAngle = 210;
+                    this.startX -= 50;
+                    arcAngle = 300;
+                    links = true; rechts = false; oben = false;
+                    for (Rectangle_Girly r : Map_Girly.rect) {
+                        if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                            f.repaint();
+                        } else {
+                            this.startX += 50;
+                            f.repaint();
+                        }
+                    }
+                    Util.sleep();
+                } else if (Keyboard.rightPressed && startX <= 1200) {
+                    moveFigur_Girly = true;
+                    this.startAngle = 380;
+                    this.startX += 50;
+                    arcAngle = 300;
+                    rechts = true; links = false; oben = false;
+                    for (Rectangle_Girly r : Map_Girly.rect) {
+                        if (!Util.checkKollision_Girly(r, Gamescreen_Girly.getPacMan())) {
+                            f.repaint();
+                        } else {
+                            this.startX -= 50;
+                            f.repaint();
+                        }
+                    }
+                    Util.sleep();
+                }
 
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+
+                }
             }
         }
     }
-}
+
+
